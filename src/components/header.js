@@ -1,16 +1,35 @@
-import React from 'react';
-import Navbar from 'react-bulma-components/lib/components/navbar';
+import React, { Component } from "react"
+import Navbar from "react-bulma-components/lib/components/navbar"
 
-export default () => (
-    <Navbar>
+class Header extends Component {
+  state = { active: false }
+
+  handleClick = () => {
+    const { active } = this.state;
+    console.log(active);
+    this.setState({active: !active}, () => {
+      console.log(this.state.active);
+    });
+  };
+
+  render() {
+    return (
+      <Navbar active={this.state.active}>
+        <Navbar.Brand>
+          <Navbar.Burger active={this.state.active} onClick={this.handleClick}/>
+        </Navbar.Brand>
         <Navbar.Menu>
-            <Navbar.Container position="end">
-              <Navbar.Item href="/">Home</Navbar.Item>
-              <Navbar.Item href="/research">Research</Navbar.Item>
-              <Navbar.Item href="/projects">Projects</Navbar.Item>
-              <Navbar.Item href="/resume">Resume</Navbar.Item>
-              <Navbar.Item href="/contact">Contact</Navbar.Item>
-            </Navbar.Container>
+          <Navbar.Container position="end">
+            <Navbar.Item href="/">Home</Navbar.Item>
+            <Navbar.Item href="/research">Research</Navbar.Item>
+            <Navbar.Item href="/projects">Projects</Navbar.Item>
+            <Navbar.Item href="/resume">Resume</Navbar.Item>
+            <Navbar.Item href="/contact">Contact</Navbar.Item>
+          </Navbar.Container>
         </Navbar.Menu>
-    </Navbar>
-)
+      </Navbar>
+    )
+  }
+}
+
+export default Header;
