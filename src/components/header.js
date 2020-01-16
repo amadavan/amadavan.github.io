@@ -6,10 +6,7 @@ class Header extends Component {
 
   handleClick = () => {
     const { active } = this.state;
-    console.log(active);
-    this.setState({active: !active}, () => {
-      console.log(this.state.active);
-    });
+    this.setState({active: !active});
   };
 
   render() {
