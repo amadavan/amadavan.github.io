@@ -1,9 +1,0 @@
----
-deployment:
- tasks:
- - PATH=$PATH:/home/madavan2/bin npm run-script build
- - export DEPLOYPATH=/home/madavan2/public_html/
- - /bin/rm -Rf $DEPLOYPATH
- - /bin/mkdir $DEPLOYPATH
- - /bin/cp -R public/* $DEPLOYPATH
-
