@@ -12,7 +12,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public -r https://$GH_TOKEN@github.com/amadavan/amadavan.github.io.git"
+    "deploy": "gatsby build && gh-pages -d public -b master -r https://$GH_TOKEN@github.com/amadavan/amadavan.github.io.git"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
@@ -41,6 +41,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/amadavan/PersonalWebsite"
+    "url": "https://github.com/amadavan/a"
   }
 }
