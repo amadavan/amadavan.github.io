@@ -5,7 +5,6 @@
  */
 
 module.exports = {
-  pathPrefix: '/PersonalWebsite',
   plugins: [
     {
       resolve: `gatsby-plugin-sass`,
