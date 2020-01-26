@@ -10,5 +10,10 @@
     "description": "Power systems simulations in academic work are frequently solved using the MATPOWER package. The package provides MATLAB and Octave M-files in order to solve power flow, continuation power flow and optimal power flow problems. The goal of the Phasor package is remove the need for MATLAB or Octave while providing access to the wide array of existing MATPOWER case files.",
     "github": "https://github.com/amadavan/PhasorPy",
     "banner": "https://github.com/amadavan/PhasorPy/raw/master/assets/phasor-banner.png"
+  },
+  {
+    "title": "UIUC Beamer Theme",
+    "description": "A simple beamer theme that I created for my own personal use. It matches the UIUC color scheme according the University standards, but can easily be adapted to other schemes.",
+    "github": "https://github.com/amadavan/UIUC-Beamer-Theme"
   }
 ]

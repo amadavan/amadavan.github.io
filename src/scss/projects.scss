@@ -23,9 +23,13 @@
   background-color: black;
 }
 
-.card .card-header {
+.card .card-header .card-header-title {
   height: 72pt !important;
   align-content: center !important;
+  text-align: center !important;
+  margin: auto !important;
+  justify-content: center;
   color: white;
+  font-size: 24pt;
   background-color: black;
 }
