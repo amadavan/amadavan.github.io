@@ -436,27 +436,42 @@
                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                 gap: 2rem;
                 margin: 2rem 0;
-                padding: 2rem;
-                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-                border-radius: 12px;
-                border: 1px solid #dee2e6;
             }
             
             .contact-method {
                 display: flex;
                 align-items: center;
                 gap: 1rem;
-                padding: 1rem;
+                padding: 1.5rem;
+                background: #f8f9fa;
+                border: 1px solid #e9ecef;
+                border-radius: 12px;
+                transition: all 0.3s ease;
+            }
+            
+            .contact-method:hover {
                 background: #ffffff;
-                border-radius: 8px;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                border-color: #512da8;
+                box-shadow: 0 4px 12px rgba(81, 45, 168, 0.15);
+                transform: translateY(-2px);
             }
             
             .contact-method i {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
                 color: #512da8;
-                width: 40px;
-                text-align: center;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                transition: all 0.3s ease;
+            }
+            
+            .contact-method:hover i {
+                background: #512da8;
+                color: #ffffff;
+                transform: scale(1.1);
             }
             
             .contact-method h3 {
@@ -670,13 +685,13 @@
                 .contact-methods {
                     grid-template-columns: 1fr;
                     gap: 1rem;
-                    padding: 1rem;
                 }
                 
                 .contact-method {
                     flex-direction: column;
                     text-align: center;
-                    gap: 0.5rem;
+                    gap: 1rem;
+                    padding: 2rem 1rem;
                 }
                 
                 .contact-form {

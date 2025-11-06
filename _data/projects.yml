@@ -1,6 +1,6 @@
 - title: RSHC
   description: "A set of algorithms to evaluate the quantity of solar capacity that a network can feasibly support without introducing instabilities, known formally as the solar hosting capacity. This includes an algorithm to evaluate the maximal solar hosting capacity and a dynamic method of identifying the set of feasible solar hosting capacities."
-  paper: https://ieeexplore.ieee.org/document/10130316
+  # paper: https://ieeexplore.ieee.org/document/10130316
   github: "https://github.com/amadavan/RSHC"
 
 - title: Stuka
