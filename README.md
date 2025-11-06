@@ -1,0 +1,1 @@
+[![Build and Deploy Cobalt Site (Optimized)](https://github.com/amadavan/amadavan.github.io/actions/workflows/main.yml/badge.svg)](https://github.com/amadavan/amadavan.github.io/actions/workflows/main.yml)
