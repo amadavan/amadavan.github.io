@@ -28,7 +28,7 @@ jobs:
         fi
       
     - name: Build site
-      run: cobalt build --trace
+      run: cobalt build
       
     - name: Upload build artifact
       uses: actions/upload-artifact@v5
