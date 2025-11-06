@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://amadavan.github.io/sitemap.xml
+
+# Disallow crawling of raw data and scripts
+Disallow: /raw_data/
+Disallow: /scripts/
+
+# Allow crawling of assets (for images, papers, etc.)
+Allow: /assets/

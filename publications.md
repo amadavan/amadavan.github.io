@@ -1,6 +1,7 @@
 ---
 layout: default.liquid
 title: Publications
+description: "Avinash Madavan's academic publications in optimization theory, power systems, and machine learning. Published in IEEE Transactions and JOTA."
 ---
 
 ## Journal Publications

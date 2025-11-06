@@ -2,7 +2,7 @@
 site:
   title: Avinash Madavan
   description: Blending rigorous fundamentals with practical solutions.
-  base_url: http://localhost:1024
+  base_url: https://amadavan.github.io
 posts:
   rss: rss.xml
 ignore:

@@ -1,6 +1,7 @@
 ---
 layout: default.liquid
 title: Resume
+description: "Avinash Madavan's professional resume. PhD in Electrical Engineering with experience in optimization, machine learning, and power systems."
 ---
 
 <div style="text-align: center; margin-bottom: 1rem;">

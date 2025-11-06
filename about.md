@@ -1,6 +1,7 @@
 ---
 layout: default.liquid
 title: About Me
+description: "Learn about Avinash Madavan's background in optimization theory, machine learning, and power systems. PhD in Electrical Engineering from UIUC."
 ---
 <!-- # About Me -->
 

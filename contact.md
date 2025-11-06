@@ -1,6 +1,7 @@
 ---
 layout: default.liquid
 title: Contact
+description: "Get in touch with Avinash Madavan for research collaborations, consulting opportunities, or project discussions. Contact information and social links."
 ---
 
 # Contact Me
