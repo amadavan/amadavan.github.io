@@ -1,0 +1,71 @@
+name: Build and Deploy Cobalt Site (Optimized)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Rust (faster alternative)
+      uses: dtolnay/rust-toolchain@stable
+      
+    - name: Cache Rust dependencies
+      uses: Swatinem/rust-cache@v2
+      
+    - name: Install Cobalt
+      run: |
+        # Use pre-compiled binary if available, otherwise compile
+        if ! command -v cobalt &> /dev/null; then
+          cargo install cobalt-bin --locked
+        fi
+      
+    - name: Build site
+      run: cobalt build --trace
+      
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: site
+        path: _site/
+        
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write
+      id-token: write
+      
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      
+    steps:
+    - name: Download build artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: site
+        path: _site
+        
+    - name: Setup Pages
+      uses: actions/configure-pages@v3
+      
+    - name: Upload to GitHub Pages
+      uses: actions/upload-pages-artifact@v2
+      with:
+        path: _site
+        
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v2
