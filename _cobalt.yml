@@ -1,0 +1,11 @@
+
+site:
+  title: Avinash Madavan
+  description: Blending rigorous fundamentals with practical solutions.
+  base_url: http://localhost:1024
+posts:
+  rss: rss.xml
+ignore:
+  - "scripts/"
+  - "references.bib"
+  - "references_links.yml"

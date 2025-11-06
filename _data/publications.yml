@@ -1,0 +1,97 @@
+- ENTRYTYPE: article
+  ID: shish2017aircraft
+  author: Shish, Kimberlee and Kaneshige, John and Acosta, Diana and Schuet, Stefan
+    and Lombaerts, Thomas and Martin, Lynne and Madavan, Avinash N
+  doi: https://doi.org/10.2514/1.G002101
+  journal: Journal of Guidance, Control, and Dynamics
+  number: '4'
+  pages: 804--816
+  publisher: American Institute of Aeronautics and Astronautics
+  title: Aircraft mode and energy-state prediction, assessment, and alerting
+  volume: '40'
+  year: '2017'
+- ENTRYTYPE: incollection
+  ID: shish2015trajectory
+  author: Shish, Kimberlee H and Kaneshige, John and Acosta, Diana M and Schuet, Stefan
+    and Lombaerts, Thomas and Martin, Lynne and Madavan, Avinash N
+  booktitle: Aiaa infotech@ aerospace
+  doi: https://doi.org/10.2514/6.2015-1113
+  pages: '1113'
+  title: Trajectory prediction and alerting for aircraft mode and energy state awareness
+  year: '2015'
+- ENTRYTYPE: inproceedings
+  ID: madavan2019risk
+  author: Madavan, Avinash N and Bose, Subhonmesh and Guo, Ye and Tong, Lang
+  booktitle: 2019 IEEE Power & Energy Society General Meeting (PESGM)
+  doi: https://doi.org/10.1109/GlobalSIP45357.2019.8969200
+  organization: IEEE
+  pages: 1--5
+  title: Risk-sensitive security-constrained economic dispatch via critical region
+    exploration
+  year: '2019'
+- ENTRYTYPE: inproceedings
+  ID: madavan2019risk
+  author: Madavan, Avinash N and Bose, Subhonmesh
+  booktitle: 2019 IEEE Global Conference on Signal and Information Processing (GlobalSIP)
+  doi: https://doi.org/10.1109/GlobalSIP45357.2019.8969200
+  organization: IEEE
+  pages: 1--5
+  title: Risk-sensitive energy procurement with uncertain wind
+  year: '2019'
+- ENTRYTYPE: inproceedings
+  ID: bose2021risk
+  author: Bose, Subhonmesh and Ndrio, Mariola and Madavan, Avinash N and Tong, Lang
+    and Guo, Ye
+  booktitle: 2021 55th Annual Conference on Information Sciences and Systems (CISS)
+  doi: https://doi.org/10.1109/CISS50987.2021.9400238
+  organization: IEEE
+  pages: 1--1
+  title: Risk-sensitive optimization and pricing for the modern power grid
+  year: '2021'
+- ENTRYTYPE: article
+  ID: madavan2021stochastic
+  author: Madavan, Avinash N and Bose, Subhonmesh
+  doi: https://doi.org/10.1007/s10957-021-01888-x
+  journal: Journal of Optimization Theory and Applications
+  number: '2'
+  pages: 428--460
+  publisher: Springer US
+  title: A stochastic primal-dual method for optimization with conditional value at
+    risk constraints
+  volume: '190'
+  year: '2021'
+- ENTRYTYPE: inproceedings
+  ID: ndrio2021pricing
+  author: Ndrio, Mariola and Madavan, Avinash N and Bose, Subhonmesh
+  booktitle: 2021 IEEE Power & Energy Society General Meeting (PESGM)
+  doi: https://doi.org/10.1109/PESGM46819.2021.9637845
+  organization: IEEE
+  pages: 01--05
+  title: Pricing conditional value at risk-sensitive economic dispatch
+  year: '2021'
+- ENTRYTYPE: article
+  ID: madavan2023risk
+  author: Madavan, Avinash N and Dahlin, Nathan and Bose, Subhonmesh and Tong, Lang
+  doi: https://doi.org/10.1109/TPWRS.2023.3238846
+  journal: IEEE Transactions on Power Systems
+  number: '1'
+  pages: 355--365
+  publisher: IEEE
+  title: Risk-based hosting capacity analysis in distribution systems
+  volume: '39'
+  year: '2023'
+- ENTRYTYPE: phdthesis
+  ID: madavan2022risk
+  author: Madavan, Avinash N
+  school: University of Illinois at Urbana-Champaign
+  title: Risk-sensitive optimization for power systems
+  year: '2022'
+- ENTRYTYPE: article
+  ID: madavan2025risk
+  arXiv: https://arxiv.org/abs/2502.14150
+  author: Madavan, Avinash N and Dahlin, Nathan and Bose, Subhonmesh and Tong, Lang
+  doi: https://doi.org/10.1109/TPWRS.2025.3589590
+  journal: arXiv preprint arXiv:2502.14150
+  title: 'Risk-Sensitive Security-Constrained Economic Dispatch: Pricing and Algorithm
+    Design'
+  year: '2025'
