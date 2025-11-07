@@ -69,7 +69,9 @@
             }
             
             .header {
-                background: linear-gradient(135deg, #512da8 0%, #4a148c 100%);
+                background: linear-gradient(135deg, #512da8 0%, #7b1fa2 50%, #4a148c 100%);
+                background-size: 400% 400%;
+                animation: gradientShift 20s ease infinite;
                 padding: 2rem;
                 margin-bottom: 0;
                 text-align: center;
@@ -99,7 +101,7 @@
             .hamburger {
                 display: none;
                 flex-direction: column;
-                background: #ffffff;
+                background: transparent;
                 border: none;
                 border-radius: 6px;
                 cursor: pointer;
@@ -111,19 +113,17 @@
                 align-items: center;
                 transition: all 0.3s ease;
                 position: relative;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.15);
             }
             
             .hamburger:hover {
-                background: #f8f9fa;
+                background: rgba(255, 255, 255, 0.1);
                 transform: scale(1.1);
-                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             }
             
             .hamburger span {
                 width: 20px;
                 height: 2px;
-                background: #512da8;
+                background: #ffffff;
                 display: block;
                 transition: 0.3s;
                 border-radius: 1px;
@@ -702,6 +702,19 @@
                 .submit-btn {
                     width: 100%;
                     justify-content: center;
+                }
+            }
+
+            /* Animation Keyframes */
+            @keyframes gradientShift {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
                 }
             }
         </style>

@@ -1,0 +1,11 @@
+# Allow PDF files to be loaded by PDF.js
+<Files "*.pdf">
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET"
+    Header set Access-Control-Allow-Headers "Range"
+</Files>
+
+# Enable CORS for all assets
+<Directory "assets/">
+    Header set Access-Control-Allow-Origin "*"
+</Directory>
