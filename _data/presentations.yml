@@ -1,12 +1,17 @@
 - title: Short-Step Interior Point Algorithm
   pdf: InteriorPointMethod.pdf
+  presented_at: Lab Group Meeting, ECE UIUC
+  year: 2017
 - title: Risk-Sensitive Security-Constrained Economic Dispatch via Critical Region Exploration
   pptx: PESGM2019.pptx
   presented_at: IEEE Power and Energy Society General Meeting 2019
+  year: 2019
 - title: Risk-Sensitive Energy Procurement with Uncertain Wind
   pdf: GlobalSIP2019.pdf
   presented_at: GlobalSIP 2020
+  year: 2020
 - title: Think Again
   pptx: "ThinkAgainv2.pptx"
   presented_by: Bob Pierce and Nateri Madavan
   presented_at: NASA Executive Leadership Program
+  year: 2023

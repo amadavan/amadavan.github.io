@@ -7,12 +7,28 @@ description: "Explore Avinash Madavan's projects in optimization, machine learni
 <div class="projects-grid">
 {% for project in site.data.projects -%}
 <div class="project-box">
+    {%- assign banner_color = "#2d1b69" -%}
+    {%- for field in project -%}
+        {%- if field[0] == "color" -%}
+            {%- assign banner_color = field[1] -%}
+        {%- endif -%}
+    {%- endfor -%}
     {%- if project.banner %}
-    <img src="{{ project.banner }}" alt="{{ project.title }} banner" class="project-banner">
+    <div class="project-banner-wrapper" style="background: {{ banner_color }};">
+        <img src="{{ project.banner }}" alt="{{ project.title }} banner" class="project-banner">
+        <div class="project-banner-placeholder">{{ project.title }}</div>
+    </div>
     {%- else %}
-    <div class="project-banner-fake">{{ project.title }}</div>
+    <div class="project-banner-fake" style="background: {{ banner_color }};">{{ project.title }}</div>
     {%- endif %}
     <div class="project-content">
+        {%- assign display_title = project.title -%}
+        {%- for field in project -%}
+            {%- if field[0] == "name" -%}
+                {%- assign display_title = field[1] -%}
+            {%- endif -%}
+        {%- endfor -%}
+        <h3 class="project-title">{{ display_title }}</h3>
         <p class="project-description">{{ project.description }}</p>
         <div class="project-links">
             {%- if project.github -%}

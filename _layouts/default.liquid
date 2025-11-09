@@ -76,10 +76,10 @@
             }
             
             .header {
-                background: linear-gradient(135deg, #6a1b9a 0%, #8e24aa 50%, #4a148c 100%);
+                background: linear-gradient(135deg, #4a148c 0%, #6a1b9a 50%, #4a148c 100%);
                 background-size: 400% 400%;
                 animation: gradientShift 60s ease infinite;
-                padding: 2rem;
+                padding: 0.5rem 2rem;
                 margin-bottom: 0;
                 text-align: center;
                 color: #ffffff;
@@ -211,8 +211,16 @@
             
             h2 {
                 font-size: 1.6rem;
-                margin-top: 2rem;
+                margin-top: 3rem;
                 margin-bottom: 1rem;
+                padding-top: 2rem;
+                border-top: 1px solid #dee2e6;
+            }
+            
+            h2:first-of-type {
+                border-top: none;
+                padding-top: 0;
+                margin-top: 2rem;
             }
             
             h3 {
@@ -243,20 +251,142 @@
                 color: #555;
             }
             
-            /* Publication Links Styling */
-            .pub-links {
-                margin-left: 2rem;
-                margin-top: 0.5rem;
-                text-align: right;
+            /* Publication Cards Styling */
+            .publications-list {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                margin: 2rem 0;
             }
             
-            .pub-links a {
-                display: inline-block;
+            .publication-card {
+                display: flex;
+                gap: 1.5rem;
+                position: relative;
+            }
+            
+            .publication-card:hover .pub-card-content {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+                border-color: #667eea;
+            }
+            
+            .pub-timeline {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-shrink: 0;
+                width: 60px;
+                position: relative;
+            }
+            
+            .pub-year-badge {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background: transparent;
+                color: #adb5bd;
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.85rem;
+                font-weight: 600;
+                position: relative;
+                z-index: 2;
+                flex-shrink: 0;
+                transition: all 0.3s ease;
+            }
+            
+            .publication-card:hover .pub-year-badge {
+                background: #fafbfc;
+                color: #868e96;
+                border: 1px solid #e9ecef;
+            }
+            
+            .timeline-line {
+                width: 2px;
+                flex: 1;
+                background: #e9ecef;
+                margin-top: 0.5rem;
+                min-height: 20px;
+                opacity: 0.6;
+            }
+            
+            .publication-card:last-child .timeline-line {
+                opacity: 0;
+            }
+            
+            .pub-card-content {
+                background: #ffffff;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+                border: 1px solid #e9ecef;
+                padding: 1.5rem 1.5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+                flex: 1;
+                transition: all 0.3s ease;
+            }
+            
+            .pub-card-title {
+                font-size: 1.15rem;
+                font-weight: 600;
+                color: #2c3e50;
+                margin: 0;
+                line-height: 1.4;
+            }
+            
+            .pub-authors {
+                color: #6c757d;
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+            
+            .pub-authors strong {
+                font-weight: 600;
+                color: #667eea;
+            }
+            
+            .pub-venue {
+                color: #495057;
+                font-size: 0.95rem;
+                display: flex;
+                align-items: flex-start;
+                gap: 0.5rem;
+                line-height: 1.5;
+            }
+            
+            .pub-venue i {
+                color: #667eea;
+                margin-top: 0.2rem;
+                flex-shrink: 0;
+            }
+            
+            .pub-organization {
+                color: #6c757d;
+                font-size: 0.9rem;
+                font-style: italic;
+            }
+            
+            .pub-card-links {
+                display: flex;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+                margin-top: 0.5rem;
+                padding-top: 1rem;
+                border-top: 1px solid #e9ecef;
+            }
+            
+            .pub-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.4rem;
                 background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                 color: white;
                 text-decoration: none;
-                padding: 0.3rem 0.8rem;
-                margin: 0.2rem 0.3rem 0.2rem 0;
+                padding: 0.4rem 0.9rem;
                 border-radius: 20px;
                 font-size: 0.85rem;
                 font-weight: 500;
@@ -264,48 +394,62 @@
                 box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             }
             
-            .pub-links a:hover {
+            .pub-link:hover {
                 transform: translateY(-1px);
                 box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-                background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
             }
             
-            .pub-links a i {
-                margin-right: 0.4rem;
+            .pub-link i {
                 font-size: 0.9em;
             }
             
             /* Different colors for different link types */
-            .pub-links a[href*="doi.org"] {
-                background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            .pub-link.doi {
+                background: #10b981;
             }
             
-            .pub-links a[href*="doi.org"]:hover {
-                background: linear-gradient(135deg, #218838 0%, #17a085 100%);
+            .pub-link.doi:hover {
+                background: #059669;
             }
             
-            .pub-links a[href*="arxiv"] {
-                background: linear-gradient(135deg, #dc3545 0%, #fd7e14 100%);
+            .pub-link.arxiv {
+                background: #ef4444;
             }
             
-            .pub-links a[href*="arxiv"]:hover {
-                background: linear-gradient(135deg, #c82333 0%, #e55a00 100%);
+            .pub-link.arxiv:hover {
+                background: #dc2626;
             }
             
-            .pub-links a[href*="presentations"], .pub-links a[href*="slides"] {
-                background: linear-gradient(135deg, #6f42c1 0%, #e83e8c 100%);
+            .pub-link.pdf {
+                background: #667eea;
             }
             
-            .pub-links a[href*="presentations"]:hover, .pub-links a[href*="slides"]:hover {
-                background: linear-gradient(135deg, #5a2d91 0%, #d21770 100%);
+            .pub-link.pdf:hover {
+                background: #5568d3;
             }
             
-            .pub-links a[href*=".pdf"] {
-                background: linear-gradient(135deg, #17a2b8 0%, #6610f2 100%);
+            .pub-link.slides, .pub-link.poster {
+                background: #8b5cf6;
             }
             
-            .pub-links a[href*=".pdf"]:hover {
-                background: linear-gradient(135deg, #138496 0%, #520dc2 100%);
+            .pub-link.slides:hover, .pub-link.poster:hover {
+                background: #7c3aed;
+            }
+            
+            .pub-link.video {
+                background: #f59e0b;
+            }
+            
+            .pub-link.video:hover {
+                background: #d97706;
+            }
+            
+            .pub-link.ppt {
+                background: #ea580c;
+            }
+            
+            .pub-link.ppt:hover {
+                background: #c2410c;
             }
             
             /* Project Box Styling */
@@ -313,45 +457,72 @@
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
                 gap: 2rem;
-                margin-top: 2rem;
+                margin: 2rem 0;
             }
             
             .project-box {
                 background: #ffffff;
                 border-radius: 12px;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.08);
                 overflow: hidden;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                border: 1px solid #e0e0e0;
+                transition: all 0.3s ease;
+                border: 1px solid #e9ecef;
                 display: flex;
                 flex-direction: column;
                 height: 100%;
             }
             
             .project-box:hover {
-                transform: translateY(-4px);
-                box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+                border-color: #667eea;
+            }
+            
+            .project-banner-wrapper {
+                position: relative;
+                width: 100%;
+                height: 120px;
+                overflow: hidden;
+                border-bottom: 1px solid #e0e0e0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             
             .project-banner {
                 width: 100%;
-                height: 120px;
+                height: 90px;
                 object-fit: cover;
-                border-bottom: 1px solid #e0e0e0;
+                object-position: center center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            
+            .project-banner.loaded {
+                opacity: 1;
+            }
+            
+            .project-banner-placeholder {
+                color: white;
+                font-size: 2rem;
+                font-weight: 300;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
             }
             
             .project-banner-fake {
                 width: 100%;
                 height: 120px;
-                background: #2d1b69;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 border-bottom: 1px solid #e0e0e0;
                 color: white;
                 font-size: 2rem;
-                font-weight: 600;
-                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+                font-weight: 300;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
             }
             
             .project-content {
@@ -382,6 +553,8 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 margin-top: auto;
+                padding-top: 1rem;
+                border-top: 1px solid #e9ecef;
             }
             
             .project-link {
@@ -408,12 +581,20 @@
                 font-size: 0.9em;
             }
             
+            .project-link[href$=".pdf"] {
+                background: #667eea;
+            }
+            
+            .project-link[href$=".pdf"]:hover {
+                background: #5568d3;
+            }
+            
             .project-link[href*="github"] {
-                background: linear-gradient(135deg, #333 0%, #24292e 100%);
+                background: #0969da;
             }
             
             .project-link[href*="github"]:hover {
-                background: linear-gradient(135deg, #24292e 0%, #1b1f23 100%);
+                background: #0550ae;
             }
             
             .project-link[href*="paper"], .project-link[href*="ieee"] {
@@ -450,22 +631,22 @@
                 align-items: center;
                 gap: 1rem;
                 padding: 1.5rem;
-                background: #f8f9fa;
+                background: #ffffff;
                 border: 1px solid #e9ecef;
                 border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.08);
                 transition: all 0.3s ease;
             }
             
             .contact-method:hover {
-                background: #ffffff;
-                border-color: #512da8;
-                box-shadow: 0 4px 12px rgba(81, 45, 168, 0.15);
+                border-color: #667eea;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.12);
                 transform: translateY(-2px);
             }
             
             .contact-method i {
                 font-size: 1.8rem;
-                color: #512da8;
+                color: #667eea;
                 width: 50px;
                 height: 50px;
                 display: flex;
@@ -476,8 +657,7 @@
             }
             
             .contact-method:hover i {
-                background: #512da8;
-                color: #ffffff;
+                color: #667eea;
                 transform: scale(1.1);
             }
             
@@ -490,10 +670,11 @@
             .contact-method p {
                 margin: 0;
                 font-size: 0.9rem;
+                color: #6c757d;
             }
             
             .contact-method a {
-                color: #512da8;
+                color: #667eea;
                 text-decoration: none;
             }
             
@@ -599,6 +780,36 @@
                 }
                 .content-wrapper {
                     padding: 1rem;
+                }
+                
+                .publications-list {
+                    gap: 1.5rem;
+                }
+                
+                .publication-card {
+                    gap: 1rem;
+                }
+                
+                .pub-timeline {
+                    width: 50px;
+                }
+                
+                .pub-year-badge {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 0.75rem;
+                }
+                
+                .pub-card-content {
+                    padding: 1rem;
+                }
+                
+                .pub-card-title {
+                    font-size: 1.05rem;
+                }
+                
+                .pub-card-links {
+                    flex-wrap: wrap;
                 }
                 
                 .navigation {
@@ -758,6 +969,7 @@
                 
                 <footer class="footer">
                     <p>&copy; {{ "now" | date: "%Y" }} Avinash N. Madavan. Built with <a href="https://cobalt-org.github.io/">Cobalt</a>.</p>
+                    <p style="font-size: 0.85rem; color: #6c757d; margin-top: 0.5rem;">Last updated: {{ "now" | date: "%B %d, %Y" }}</p>
                 </footer>
             </div>
         </div>
@@ -794,6 +1006,20 @@
                     hamburger.classList.remove('active');
                     navLinks.classList.remove('active');
                 }
+            });
+            
+            // Handle project banner image loading
+            document.addEventListener('DOMContentLoaded', () => {
+                const banners = document.querySelectorAll('.project-banner');
+                banners.forEach(banner => {
+                    if (banner.complete) {
+                        banner.classList.add('loaded');
+                    } else {
+                        banner.addEventListener('load', () => {
+                            banner.classList.add('loaded');
+                        });
+                    }
+                });
             });
         </script>
     </body>
