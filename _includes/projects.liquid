@@ -1,0 +1,127 @@
+{% for project in site.data.projects -%}
+<div class="project-box">
+    {%- assign banner_color = "#2d1b69" -%}
+    {%- for field in project -%}
+        {%- if field[0] == "color" -%}
+            {%- assign banner_color = field[1] -%}
+        {%- endif -%}
+    {%- endfor -%}
+    {%- if project.banner %}
+    <div class="project-banner-wrapper" style="background: {{ banner_color }};">
+        <img src="{{ project.banner }}" alt="{{ project.title }} banner" class="project-banner">
+        <div class="project-banner-placeholder">{{ project.title }}</div>
+    </div>
+    {%- else %}
+    <div class="project-banner-fake" style="background: {{ banner_color }};">{{ project.title }}</div>
+    {%- endif %}
+    <div class="project-content">
+        {%- assign display_title = project.title -%}
+        {%- for field in project -%}
+            {%- if field[0] == "name" -%}
+                {%- assign display_title = field[1] -%}
+            {%- endif -%}
+        {%- endfor -%}
+        <h3 class="project-title">{{ display_title }}</h3>
+        <p class="project-description">{{ project.description }}</p>
+        {%- if project.languages -%}
+            <div class="project-languages">
+                {%- assign total = 0 -%}
+                {%- for pair in project.languages -%}
+                    {%- assign total = total | plus: pair[1] -%}
+                {%- endfor -%}
+                {%- for pair in project.languages -%}
+                    {%- assign lang = pair[0] -%}
+                    {%- assign value = pair[1] -%}
+                    {%- assign color = site.data.github_colors[lang].color | default: '#e0e0e0' -%}
+                    <span style="display: inline-flex; align-items: center; margin-right: 0.5em; margin-bottom: 0.3em; font-size: 0.78em;">
+                        <span style="display: inline-block; width: 0.6em; height: 0.6em; background: {{ color }}; border-radius: 0.15em; border: 1px solid #ccc; margin-right: 0.25em;"></span>
+                        <span style="background: none; color: inherit;">{{ lang }}</span>
+                    </span>
+                {%- endfor -%}
+            </div>
+                <div class="project-language-bar" style="display: flex; height: 0.5em; width: 100%; border-radius: 0.5em; overflow: visible; margin-bottom: 2.2em; margin-top: 0.2em; position: relative;">
+                {%- assign percent_sum = 0 -%}
+                {%- for pair in project.languages -%}
+                    {%- assign lang = pair[0] -%}
+                    {%- assign value = pair[1] -%}
+                    {%- assign color = site.data.github_colors[lang].color | default: '#e0e0e0' -%}
+                    {%- assign percent = value | times: 100 | divided_by: total -%}
+                    {%- assign percent_sum = percent_sum | plus: percent -%}
+                    <span style="display: block; height: 100%; background: {{ color }}; width: {{ percent }}%; position: relative; cursor: pointer;">
+                        <span style="display: none; position: absolute; left: 0; top: 0.7em; font-size: 0.8em; color: #888; padding: 0; margin: 0; white-space: nowrap; background: none; border: none; z-index: 10; text-align: left; min-width: max-content;" class="lang-bar-tooltip">{{ lang }} ({{ percent }}%)</span>
+                    </span>
+                {%- endfor -%}
+                {%- assign remaining = 100 | minus: percent_sum -%}
+                {%- if remaining > 0 -%}
+                    <span style="display: block; height: 100%; background: #e0e0e0; width: {{ remaining }}%; position: relative;"></span>
+                {%- endif -%}
+            </div>
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var bars = document.querySelectorAll('.project-language-bar > span');
+                bars.forEach(function(bar) {
+                    bar.addEventListener('mouseenter', function() {
+                        var tip = bar.querySelector('.lang-bar-tooltip');
+                        if (tip) {
+                            tip.style.display = 'block';
+                            setTimeout(function() {
+                                var barRect = bar.getBoundingClientRect();
+                                var barParentRect = bar.parentElement.getBoundingClientRect();
+                                var barMid = barRect.left + barRect.width / 2;
+                                var parentMid = barParentRect.left + barParentRect.width / 2;
+                                if (barMid > parentMid) {
+                                    tip.style.left = 'auto';
+                                    tip.style.right = '0';
+                                    tip.style.textAlign = 'right';
+                                    tip.style.transform = 'none';
+                                    tip.style.top = '0.7em';
+                                    tip.style.color = '#888';
+                                } else {
+                                    tip.style.left = '0';
+                                    tip.style.right = 'auto';
+                                    tip.style.textAlign = 'left';
+                                    tip.style.transform = 'none';
+                                    tip.style.top = '0.7em';
+                                    tip.style.color = '#888';
+                                }
+                            }, 0);
+                        }
+                    });
+                    bar.addEventListener('mouseleave', function() {
+                        var tip = bar.querySelector('.lang-bar-tooltip');
+                        if (tip) tip.style.display = 'none';
+                    });
+                });
+            });
+            </script>
+        {%- endif -%}
+        <div class="project-links">
+            {%- if project.github -%}
+            <a href="{{ project.github }}" target="_blank" class="project-link">
+                <i class="fab fa-github"></i>GitHub
+            </a>
+            {%- endif -%}
+            {%- if project.paper -%}
+            <a href="{{ project.paper }}" target="_blank" class="project-link">
+                <i class="fas fa-file-text"></i>Paper
+            </a>
+            {%- endif -%}
+            {%- if project.demo -%}
+            <a href="{{ project.demo }}" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>Demo
+            </a>
+            {%- endif -%}
+            {%- if project.documentation -%}
+            <a href="{{ project.documentation }}" target="_blank" class="project-link">
+                <i class="fas fa-book"></i>Docs
+            </a>
+            {%- endif -%}
+            {%- if project.website -%}
+            <a href="{{ project.website }}" target="_blank" class="project-link">
+                <i class="fas fa-globe"></i>Website
+            </a>
+            {%- endif %}
+        </div>
+    </div>
+</div>
+{%- endfor %}
