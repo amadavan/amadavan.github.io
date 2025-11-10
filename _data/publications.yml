@@ -83,9 +83,18 @@
 - ENTRYTYPE: phdthesis
   ID: madavan2022risk
   author: Madavan, Avinash N
+  external: https://hdl.handle.net/2142/117802
   school: University of Illinois at Urbana-Champaign
   title: Risk-sensitive optimization for power systems
   year: '2022'
+- ENTRYTYPE: mastersthesis
+  ID: madavan2018risk
+  author: Madavan, Avinash N
+  external: https://hdl.handle.net/2142/102862
+  school: University of Illinois at Urbana-Champaign
+  title: Risk-Sensitive Security-Constrained Economic Dispatch via Critical Region
+    Exploration
+  year: '2018'
 - ENTRYTYPE: article
   ID: madavan2025risk
   arXiv: https://arxiv.org/abs/2502.14150
