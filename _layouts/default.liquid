@@ -52,21 +52,12 @@
         <style>
             .profile-card {
                 background: #fff;
-                /* border-radius: 12px; */
-                /* border: 1px solid #ececec; */
                 box-shadow: none;
                 transition: none;
-                /* padding: 0 1.25rem; */
                 max-width: 600px;
                 margin: 0 auto;
-                /* margin-bottom: 2rem; */
                 gap: 0;
             }
-            /* .profile-card:hover {
-                box-shadow: none;
-                transform: none;
-                border-color: #ececec;
-            } */
             .profile-social {
                 width:36px;
                 height:36px;
@@ -107,10 +98,10 @@
                 border: none;
             }
             .header {
-                background: #6a1b9a; /* #4a148c 0%, #6a1b9a 50%, #4a148c 100% */
+                background: #5c2ba9; /* solid color between #6a1b9a, #4a148c, #667eea */
                 background-size: 400% 400%;
                 animation: gradientShift 60s ease infinite;
-                padding: 0 2rem;
+                padding: 0 0;
                 margin-bottom: 0;
                 text-align: left;
                 color: #ffffff;
@@ -224,10 +215,10 @@
             h2 {
                 font-size: 1.6rem;
                 font-weight: 600;
-                margin-top: 3rem;
+                margin-top: 2rem;
                 margin-bottom: 1rem;
-                padding-top: 2rem;
-                border-top: 1px solid #dee2e6;
+                padding-top: 1rem;
+                /* border-top: 1px solid #adb5bd; */
             }
             h2:first-of-type {
                 border-top: none;
@@ -285,7 +276,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 1.2rem;
-                margin: 0 0 1.2rem 0;
+                margin: 0 0 2.4rem 0;
             }
             .pub-year-badge {
                 width: 45px;
@@ -796,7 +787,6 @@
                     </ul>
                 </nav>
             </header>
-            
             <div class="content-wrapper">
                 {% if page.title %}
                 <div class="page-header">

@@ -4,7 +4,8 @@ title: Publications
 description: "Avinash Madavan's academic publications in optimization theory, power systems, and machine learning. Published in IEEE Transactions and JOTA."
 ---
 
-## Journal Publications
+<!-- Journal Publications -->
+{% include "publication_list_header.liquid" title:"Journal Publications" %}
 
 {% assign articles = site.data.publications | where: 'ENTRYTYPE', 'article' | sort: 'year' | reverse -%}
 <div class="publications-list">
@@ -13,7 +14,8 @@ description: "Avinash Madavan's academic publications in optimization theory, po
 {%- endfor -%}
 </div>
 
-## Conference Proceedings
+<!-- Conference Publications -->
+{% include "publication_list_header.liquid" title:"Conference Proceedings" %}
 
 {% assign conferences = site.data.publications | where: 'ENTRYTYPE', 'inproceedings' | sort: 'year' | reverse -%}
 <div class="publications-list">
@@ -22,7 +24,9 @@ description: "Avinash Madavan's academic publications in optimization theory, po
 {%- endfor -%}
 </div>
 
-## Dissertations
+
+<!-- Dissertations -->
+{% include "publication_list_header.liquid" title:"Dissertations" %}
 
 {% assign theses = site.data.publications | where: 'ENTRYTYPE', 'phdthesis' | sort: 'year' | reverse -%}
 <div class="publications-list">
@@ -38,7 +42,8 @@ description: "Avinash Madavan's academic publications in optimization theory, po
 {%- endfor -%}
 </div>
 
-## Book Chapters
+<!-- Book Chapters -->
+{% include "publication_list_header.liquid" title:"Book Chapters" %}
 
 {% assign chapters = site.data.publications | where: 'ENTRYTYPE', 'incollection' | sort: 'year' | reverse -%}
 <div class="publications-list">
@@ -47,7 +52,8 @@ description: "Avinash Madavan's academic publications in optimization theory, po
 {%- endfor -%}
 </div>
 
-## Presentations
+<!-- Presentations -->
+{% include "publication_list_header.liquid" title:"Presentations" %}
 
 {% assign presentations = site.data.presentations | sort: 'year' | reverse -%}
 <div class="publications-list">
