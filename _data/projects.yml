@@ -10,6 +10,7 @@
     MATLAB: 9744
     Starlark: 8365
   name: Risk-Sensitive Solar Hosting Capacity
+  color: '#4caf50'
   title: RSHC
 - banner: https://github.com/amadavan/Stuka/raw/master/assets/stuka-banner.png
   color: '#000000'

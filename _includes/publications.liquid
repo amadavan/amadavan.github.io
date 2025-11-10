@@ -2,7 +2,7 @@
 Reusable publication card partial for all publication types.
 Usage: {% include "publications.liquid" pub=pub type=type %}
 {%- endcomment -%}
-<div class="publication-card">
+<div class="publication-card card">
   <div class="pub-card-content">
     <h3 class="pub-card-title">{{ pub.title | remove: '"' | remove: '{' | remove: '}' }}</h3>
     {%- if pub.author -%}

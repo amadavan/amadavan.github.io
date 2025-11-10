@@ -18,9 +18,11 @@ bose2021risk:
 
 madavan2021stochastic:
   doi: https://doi.org/10.1007/s10957-021-01888-x
+  arXiv: https://arxiv.org/abs/1908.01086
 
 madavan2023risk:
   doi: https://doi.org/10.1109/TPWRS.2023.3238846
+  arXiv: https://arxiv.org/abs/2204.09096
 
 ndrio2021pricing:
   doi: https://doi.org/10.1109/PESGM46819.2021.9637845

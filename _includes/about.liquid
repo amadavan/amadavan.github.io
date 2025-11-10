@@ -1,0 +1,63 @@
+<div class="profile-card">
+  <div style="padding:1rem 1.5rem; display:flex; flex-direction:column; gap:0rem; align-items:flex-start;">
+    <div style="width:100%; display:flex; flex-direction:column; align-items:center; gap: 0; margin: 0; margin-bottom: 0.25rem; padding: 0;">
+      <div style="font-size:1.5rem; font-weight:500; color:#0969da; text-align:center; margin: 0; padding: 0; line-height: 1;">Avinash Madavan</div>
+      <div style="font-size:1.15rem; color:#888; font-weight:500; margin: 0; padding: 0; text-align:center; font-style:italic;">Researcher &amp; Engineer</div>
+    </div>
+    <div style="font-size:0.9rem; color:#555; display:flex; align-items:center; gap:0.5rem;">
+      <i class="fas fa-location-dot" style="color:#667eea; width:1.25em; text-align:center; font-size:1rem;"></i>
+      <span style="margin-left:0em;">Brooklyn, NY</span>
+    </div>
+    <div style="font-size:0.9rem; color:#555; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-graduation-cap" style="color:#667eea; font-size: 1rem;"></i> PhD, Electrical Engineering, UIUC</div>
+    <div style="font-size:0.9rem; color:#555; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-tags" style="color:#667eea; font-size: 1rem;"></i>
+      <span style="margin-left:0.25em; font-weight:500; font-size: 0.9rem;">Optimization</span>
+      <span style="margin:0 0.1rem; color:#888; font-size:0.9rem;">&#9671;</span>
+      <span style="font-weight:500; font-size: 0.9rem;">Machine Learning</span>
+      <span style="margin:0 0.1rem; color:#888; font-size:0.9rem;">&#9671;</span>
+      <span style="font-weight:500; font-size: 0.9rem;">Power Systems</span>
+    </div>
+    <div style="width:100%; display:flex; justify-content:center; gap:0.7em; margin-top:0.5rem; overflow:visible;">
+      <a href="mailto:avinash.madavan@gmail.com" class="profile-social" style="color:#d44638;" title="Email">
+        <i class="fas fa-envelope" aria-label="Email" style="filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12));"></i>
+        <span class="profile-social-label" style="display:none; opacity:0; pointer-events:none; position:fixed; left:50%; top:-10px; transform:translateX(-50%); color:#888; background:none; padding:0; border-radius:0; font-size:0.75rem; font-weight:400; white-space:nowrap; z-index:9999; transition:opacity 0.2s;">Email</span>
+      </a>
+      <a href="https://www.linkedin.com/in/avinashmadavan/" target="_blank" rel="noopener" class="profile-social" style="color:#0077b5;" title="LinkedIn">
+        <i class="fab fa-linkedin" aria-label="LinkedIn" style="filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12));"></i>
+        <span class="profile-social-label" style="display:none; opacity:0; pointer-events:none; position:fixed; left:50%; top:-10px; transform:translateX(-50%); color:#888; background:none; padding:0; border-radius:0; font-size:0.75rem; font-weight:400; white-space:nowrap; z-index:9999; transition:opacity 0.2s;">LinkedIn</span>
+      </a>
+      <a href="https://scholar.google.com/citations?user=Oqqtb00AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" class="profile-social" style="color:#4285f4;" title="Google Scholar">
+        <i class="fas fa-graduation-cap" aria-label="Google Scholar" style="filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12));"></i>
+        <span class="profile-social-label" style="display:none; opacity:0; pointer-events:none; position:fixed; left:50%; top:-10px; transform:translateX(-50%); color:#888; background:none; padding:0; border-radius:0; font-size:0.75rem; font-weight:400; white-space:nowrap; z-index:9999; transition:opacity 0.2s;">Scholar</span>
+      </a>
+      <a href="https://github.com/amadavan" target="_blank" rel="noopener" class="profile-social" style="color:#0969da;" title="GitHub">
+        <i class="fab fa-github" aria-label="GitHub" style="filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12));"></i>
+        <span class="profile-social-label" style="display:none; opacity:0; pointer-events:none; position:fixed; left:50%; top:-10px; transform:translateX(-50%); color:#888; background:none; padding:0; border-radius:0; font-size:0.75rem; font-weight:400; white-space:nowrap; z-index:9999; transition:opacity 0.2s;">GitHub</span>
+      </a>
+      <a href="https://orcid.org/0000-0002-1016-0118" target="_blank" rel="noopener" class="profile-social" style="color:#a6ce39;" title="ORCID">
+        <i class="fab fa-orcid" aria-label="ORCID" style="filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12));"></i>
+        <span class="profile-social-label" style="display:none; opacity:0; pointer-events:none; position:fixed; left:50%; top:-10px; transform:translateX(-50%); color:#888; background:none; padding:0; border-radius:0; font-size:0.75rem; font-weight:400; white-space:nowrap; z-index:9999; transition:opacity 0.2s;">ORCID</span>
+      </a>
+    </div>
+    <!-- Social icon hover style is now in default.liquid -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.profile-social').forEach(function(link) {
+          link.addEventListener('mouseenter', function() {
+            var label = link.querySelector('.profile-social-label');
+            if (label) {
+              label.style.display = 'block';
+              setTimeout(function() { label.style.opacity = '1'; }, 10);
+            }
+          });
+          link.addEventListener('mouseleave', function() {
+            var label = link.querySelector('.profile-social-label');
+            if (label) {
+              label.style.opacity = '0';
+              setTimeout(function() { label.style.display = 'none'; }, 200);
+            }
+          });
+        });
+      });
+    </script>
+  </div>
+</div>

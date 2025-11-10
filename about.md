@@ -5,6 +5,13 @@ description: "Learn about Avinash Madavan's background in optimization theory, m
 ---
 <!-- # About Me -->
 
+---
+
+{% include "about.liquid" %}
+
+---
+
+
 I'm a researcher and engineer who works at the intersection of optimization theory and practical systems. I develop scalable algorithms for complex decision-making problems and build production systems that actually work in the real world.
 
 ## What I Do

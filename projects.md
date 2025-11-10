@@ -9,4 +9,3 @@ description: "Explore Avinash Madavan's projects in optimization, machine learni
 {% include "projects.liquid" %}
 </div>
 
----

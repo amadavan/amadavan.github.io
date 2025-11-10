@@ -50,6 +50,7 @@
   year: '2021'
 - ENTRYTYPE: article
   ID: madavan2021stochastic
+  arXiv: https://arxiv.org/abs/1908.01086
   author: Madavan, Avinash N and Bose, Subhonmesh
   doi: https://doi.org/10.1007/s10957-021-01888-x
   journal: Journal of Optimization Theory and Applications
@@ -71,6 +72,7 @@
   year: '2021'
 - ENTRYTYPE: article
   ID: madavan2023risk
+  arXiv: https://arxiv.org/abs/2204.09096
   author: Madavan, Avinash N and Dahlin, Nathan and Bose, Subhonmesh and Tong, Lang
   doi: https://doi.org/10.1109/TPWRS.2023.3238846
   journal: IEEE Transactions on Power Systems

@@ -1,19 +1,19 @@
 {% for project in site.data.projects -%}
-<div class="project-box">
+<div class="project-box card">
     {%- assign banner_color = "#2d1b69" -%}
     {%- for field in project -%}
         {%- if field[0] == "color" -%}
             {%- assign banner_color = field[1] -%}
         {%- endif -%}
     {%- endfor -%}
-    {%- if project.banner %}
+    {%- if project.banner -%}
     <div class="project-banner-wrapper" style="background: {{ banner_color }};">
         <img src="{{ project.banner }}" alt="{{ project.title }} banner" class="project-banner">
         <div class="project-banner-placeholder">{{ project.title }}</div>
     </div>
-    {%- else %}
+    {%- else -%}
     <div class="project-banner-fake" style="background: {{ banner_color }};">{{ project.title }}</div>
-    {%- endif %}
+    {%- endif -%}
     <div class="project-content">
         {%- assign display_title = project.title -%}
         {%- for field in project -%}
