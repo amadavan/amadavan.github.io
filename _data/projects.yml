@@ -1,24 +1,48 @@
-- title: RSHC
-  name: "Risk-Sensitive Solar Hosting Capacity"
-  description: "A set of algorithms to evaluate the quantity of solar capacity that a network can feasibly support without introducing instabilities, known formally as the solar hosting capacity. This includes an algorithm to evaluate the maximal solar hosting capacity and a dynamic method of identifying the set of feasible solar hosting capacities."
-  # paper: https://ieeexplore.ieee.org/document/10130316
-  github: "https://github.com/amadavan/RSHC"
-  color: "#2d1b69"
-
-- title: Stuka
-  description: "A framework for large-scale linear programs. This library provides a framework for implementing algorithms that provides clarity to the algorithms and allows fast computation by leveraging libraries such as Eigen and SuiteSparse."
-  github: "https://github.com/amadavan/Stuka"
-  banner: "https://github.com/amadavan/Stuka/raw/master/assets/stuka-banner.png"
-  color: "#000000"
-
-- title: PhasorPy
-  description: "Power systems simulations in academic work are frequently solved using the MATPOWER package. The package provides MATLAB and Octave M-files in order to solve power flow, continuation power flow and optimal power flow problems. The goal of the Phasor package is remove the need for MATLAB or Octave while providing access to the wide array of existing MATPOWER case files."
-  github: "https://github.com/amadavan/PhasorPy"
-  banner: "https://github.com/amadavan/PhasorPy/raw/master/assets/phasor-banner.png"
-  color: "#000000"
-
-- title: UIUC Template
+- color: '#2d1b69'
+  description: A set of algorithms to evaluate the quantity of solar capacity that
+    a network can feasibly support without introducing instabilities, known formally
+    as the solar hosting capacity. This includes an algorithm to evaluate the maximal
+    solar hosting capacity and a dynamic method of identifying the set of feasible
+    solar hosting capacities.
+  github: https://github.com/amadavan/RSHC
+  languages:
+    C++: 66006
+    MATLAB: 9744
+    Starlark: 8365
+  name: Risk-Sensitive Solar Hosting Capacity
+  title: RSHC
+- banner: https://github.com/amadavan/Stuka/raw/master/assets/stuka-banner.png
+  color: '#000000'
+  description: A framework for large-scale linear programs. This library provides
+    a framework for implementing algorithms that provides clarity to the algorithms
+    and allows fast computation by leveraging libraries such as Eigen and SuiteSparse.
+  github: https://github.com/amadavan/Stuka
+  languages:
+    C: 46379
+    C++: 5016868
+    CMake: 19079
+    Makefile: 9949
+    Python: 20547
+    Shell: 5392
+  title: Stuka
+- banner: https://github.com/amadavan/PhasorPy/raw/master/assets/phasor-banner.png
+  color: '#000000'
+  description: Power systems simulations in academic work are frequently solved using
+    the MATPOWER package. The package provides MATLAB and Octave M-files in order
+    to solve power flow, continuation power flow and optimal power flow problems.
+    The goal of the Phasor package is remove the need for MATLAB or Octave while providing
+    access to the wide array of existing MATPOWER case files.
+  github: https://github.com/amadavan/PhasorPy
+  languages:
+    MATLAB: 72636124
+    Python: 30723
+  title: PhasorPy
+- color: '#E84A27'
+  description: A Beamer theme for creating presentations in the style of the University
+    of Illinois at Urbana-Champaign. The theme provides a clean and modern look while
+    adhering to the university's branding guidelines.
+  github: https://github.com/amadavan/UIUC-Beamer-Theme
+  languages:
+    TeX: 10505
   name: UIUC-Themed Beamer Template
-  color: "#E84A27"
-  description: "A Beamer theme for creating presentations in the style of the University of Illinois at Urbana-Champaign. The theme provides a clean and modern look while adhering to the university's branding guidelines."
-  github: "https://github.com/amadavan/UIUC-Beamer-Theme"
+  title: UIUC Template
