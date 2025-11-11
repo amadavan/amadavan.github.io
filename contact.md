@@ -8,18 +8,18 @@ I'm always interested in discussing research collaborations, consulting opportun
 
 <div class="contact-methods">
 <div class="contact-method">
-<i class="fas fa-envelope"></i>
+<i class="fas fa-envelope" style="color:#6a1b9a;"></i>
 <div>
 <h3>Email</h3>
-<p><a href="mailto:avinash.madavan@gmail.com">avinash.madavan@gmail.com</a></p>
+<p><a href="mailto:avinash.madavan@gmail.com" style="color:#6a1b9a;">avinash.madavan@gmail.com</a></p>
 </div>
 </div>
 
 <div class="contact-method">
-<i class="fab fa-linkedin"></i>
+<i class="fab fa-linkedin" style="color:#6a1b9a;"></i>
 <div>
 <h3>LinkedIn</h3>
-<p><a href="https://linkedin.com/in/amadavan" target="_blank">linkedin.com/in/amadavan</a></p>
+<p><a href="https://linkedin.com/in/amadavan" target="_blank" style="color:#6a1b9a;">linkedin.com/in/amadavan</a></p>
 </div>
 </div>
 </div>
@@ -28,26 +28,26 @@ I'm always interested in discussing research collaborations, consulting opportun
 
 <div class="contact-methods">
 <div class="contact-method">
-<i class="fas fa-graduation-cap"></i>
+<i class="fas fa-graduation-cap" style="color:#6a1b9a;"></i>
 <div>
 <h3>Google Scholar</h3>
-<p><a href="https://scholar.google.com/citations?user=Oqqtb00AAAAJ&hl=en&oi=ao" target="_blank">View publications</a></p>
+<p><a href="https://scholar.google.com/citations?user=Oqqtb00AAAAJ&hl=en&oi=ao" target="_blank" style="color:#6a1b9a;">View publications</a></p>
 </div>
 </div>
 
 <div class="contact-method">
-<i class="fab fa-github"></i>
+<i class="fab fa-github" style="color:#6a1b9a;"></i>
 <div>
 <h3>GitHub</h3>
-<p><a href="https://github.com/amadavan" target="_blank">github.com/amadavan</a></p>
+<p><a href="https://github.com/amadavan" target="_blank" style="color:#6a1b9a;">github.com/amadavan</a></p>
 </div>
 </div>
 
 <div class="contact-method">
-<i class="fab fa-orcid"></i>
+<i class="fab fa-orcid" style="color:#6a1b9a;"></i>
 <div>
 <h3>ORCID</h3>
-<p><a href="https://orcid.org/0000-0002-1016-0118" target="_blank">0000-0002-1016-0118</a></p>
+<p><a href="https://orcid.org/0000-0002-1016-0118" target="_blank" style="color:#6a1b9a;">0000-0002-1016-0118</a></p>
 </div>
 </div>
 </div>

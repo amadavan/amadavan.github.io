@@ -33,13 +33,13 @@
                     {%- assign lang = pair[0] -%}
                     {%- assign value = pair[1] -%}
                     {%- assign color = site.data.github_colors[lang].color | default: '#e0e0e0' -%}
-                    <span style="display: inline-flex; align-items: center; margin-right: 0.5em; margin-bottom: 0.3em; font-size: 0.78em;">
-                        <span style="display: inline-block; width: 0.6em; height: 0.6em; background: {{ color }}; border-radius: 0.15em; border: 1px solid #ccc; margin-right: 0.25em;"></span>
+                    <span style="display: inline-flex; align-items: center; margin-right: 0.5em; margin-bottom: 0.3em; font-size: 0.8em;">
+                        <span style="display: inline-block; width: 0.6em; height: 0.6em; background: {{ color }}; border-radius: 0.15em; border: 1px solid {{ color }}; margin-right: 0.25em;"></span>
                         <span style="background: none; color: inherit;">{{ lang }}</span>
                     </span>
                 {%- endfor -%}
             </div>
-                <div class="project-language-bar" style="display: flex; height: 0.5em; width: 100%; border-radius: 0.5em; overflow: visible; margin-bottom: 2.2em; margin-top: 0.2em; position: relative; background: #e0e0e0;">
+                <div class="project-language-bar" style="display: flex; height: 0.5em; width: 100%; overflow: visible; margin-bottom: 2.2em; margin-top: 0.2em; position: relative; background: #e0e0e0;">
                 {%- assign percent_sum = 0 -%}
                 {%- for pair in project.languages -%}
                     {%- assign lang = pair[0] -%}
@@ -97,27 +97,27 @@
         {%- endif -%}
         <div class="project-links">
             {%- if project.github -%}
-            <a href="{{ project.github }}" target="_blank" class="project-link">
+            <a href="{{ project.github }}" target="_blank" class="project-link" style="background:#0969da; color:#fff;">
                 <i class="fab fa-github"></i>GitHub
             </a>
             {%- endif -%}
             {%- if project.paper -%}
-            <a href="{{ project.paper }}" target="_blank" class="project-link">
+            <a href="{{ project.paper }}" target="_blank" class="project-link" style="background:#28a745; color:#fff;">
                 <i class="fas fa-file-text"></i>Paper
             </a>
             {%- endif -%}
             {%- if project.demo -%}
-            <a href="{{ project.demo }}" target="_blank" class="project-link">
+            <a href="{{ project.demo }}" target="_blank" class="project-link" style="background:#ff9800; color:#fff;">
                 <i class="fas fa-external-link-alt"></i>Demo
             </a>
             {%- endif -%}
             {%- if project.documentation -%}
-            <a href="{{ project.documentation }}" target="_blank" class="project-link">
+            <a href="{{ project.documentation }}" target="_blank" class="project-link" style="background:#8e24aa; color:#fff;">
                 <i class="fas fa-book"></i>Docs
             </a>
             {%- endif -%}
             {%- if project.website -%}
-            <a href="{{ project.website }}" target="_blank" class="project-link">
+            <a href="{{ project.website }}" target="_blank" class="project-link" style="background:#009688; color:#fff;">
                 <i class="fas fa-globe"></i>Website
             </a>
             {%- endif %}

@@ -51,7 +51,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <style>
             .profile-card {
-                background: #fff;
+                background: white;
                 box-shadow: none;
                 transition: none;
                 max-width: 600px;
@@ -79,7 +79,7 @@
                 line-height: 1.6;
                 margin: 0;
                 padding: 0;
-                background-color: #fff;
+                background-color: white;
                 color: #333333;
                 min-height: 100vh;
             }
@@ -93,7 +93,7 @@
                 margin: 0 auto;
                 padding: 1.2rem 0.5rem;
                 flex: 1;
-                background: #fff;
+                background: white;
                 box-shadow: none;
                 border: none;
             }
@@ -104,13 +104,13 @@
                 padding: 0 0;
                 margin-bottom: 0;
                 text-align: left;
-                color: #ffffff;
+                color: white;
             }
             .site-title {
                 margin: 0 0 1.5rem 0;
                 font-size: 2.5rem;
                 font-weight: 300;
-                color: #ffffff;
+                color: white;
                 text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             }
             .site-title a {
@@ -146,7 +146,7 @@
             .hamburger span {
                 width: 20px;
                 height: 2px;
-                background: #ffffff;
+                background: white;
                 display: block;
                 transition: 0.3s;
                 border-radius: 1px;
@@ -174,14 +174,14 @@
                 background: transparent;
                 border: none;
                 border-radius: 50px;
-                color: #ffffff;
+                color: white;
                 text-decoration: none;
                 font-weight: 500;
             }
             .nav-links a:hover {
                 background: rgba(255, 255, 255, 0.1);
                 border: none;
-                color: #ffffff;
+                color: white;
             }
             .page-header {
                 text-align: center;
@@ -258,7 +258,7 @@
                 display: flex;
                 gap: 1.5rem;
                 position: relative;
-                background: #ffffff;
+                background: white;
                 border-radius: 12px;
                 overflow: hidden;
                 transition: all 0.3s ease;
@@ -346,72 +346,54 @@
                 display: flex;
                 gap: 0.5rem;
                 flex-wrap: wrap;
-                margin-top: 0.5rem;
+                /* margin-top: 0.5rem; */
                 padding-top: 1rem;
                 border-top: 1px solid #e0e0e0;
             }
-            .pub-link {
-                display: inline-flex;
-                align-items: center;
-                gap: 0.4rem;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                color: white;
-                text-decoration: none;
-                padding: 0.2rem 0.9rem;
-                border-radius: 20px;
-                font-size: 0.85rem;
-                font-weight: 500;
-                transition: all 0.3s ease;
-                /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
-            }
-            .pub-link:hover {
-                transform: translateY(-1px);
-                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            }
-            .pub-link i {
+            .project-link i {
                 font-size: 0.9em;
             }
             /* Different colors for different link types */
-            .pub-link.doi {
+            .project-link.doi {
                 background: #10b981;
             }
-            .pub-link.doi:hover {
+            .project-link.doi:hover {
                 background: #059669;
             }
-            .pub-link.arxiv {
+            .project-link.arxiv {
                 background: #ef4444;
             }
-            .pub-link.pdf:hover {
+            .project-link.pdf:hover {
                 background: #5568d3;
             }
-            .pub-link.slides, .pub-link.poster {
+            .project-link.slides, .project-link.poster {
                 background: #8b5cf6;
             }
-            .pub-link.slides:hover, .pub-link.poster:hover {
+            .project-link.slides:hover, .project-link.poster:hover {
                 background: #7c3aed;
             }
-            .pub-link.video {
+            .project-link.video {
                 background: #f59e0b;
             }
-            .pub-link.video:hover {
+            .project-link.video:hover {
                 background: #d97706;
             }
-            .pub-link.ppt {
+            .project-link.ppt {
                 background: #ea580c;
             }
-            .pub-link.ppt:hover {
+            .project-link.ppt:hover {
                 background: #c2410c;
             }
-            .pub-link.external {
+            .project-link.external {
                 background: #6c757d;
             }
-            .pub-link.external:hover {
+            .project-link.external:hover {
                 background: #5a6268;
             }
-            .pub-link.pdf {
+            .project-link.pdf {
                 background: #667eea;
             }
-            .pub-link.pdf:hover {
+            .project-link.pdf:hover {
                 background: #5568d3;
             }
             /* Project Box Styling */
@@ -492,26 +474,31 @@
                 margin-bottom: 1.5rem;
                 flex-grow: 1;
             }
-            .project-links {
+            .project-links, .pub-card-links {
                 display: flex;
-                gap: 0.75rem;
+                gap: 0.5rem;
                 flex-wrap: wrap;
                 justify-content: center;
-                margin-top: auto;
+                /* margin-top: 0rem; */
                 padding-top: 1rem;
                 border-top: 1px solid #d0d0d0;
             }
+            .pub-card-links {
+                justify-content: flex-start;
+            }
             .project-link {
-                display: inline-block;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.4rem;
                 background: linear-gradient(135deg, #512da8 0%, #4a148c 100%);
                 color: white;
                 text-decoration: none;
-                padding: 0.5rem 1rem;
+                padding: 0.2rem 0.9rem;
                 border-radius: 20px;
                 font-size: 0.85rem;
                 font-weight: 500;
                 transition: all 0.3s ease;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
             }
             .project-link:hover {
                 transform: translateY(-1px);
@@ -540,7 +527,7 @@
             .project-link[href*="paper"]:hover, .project-link[href*="ieee"]:hover {
                 background: linear-gradient(135deg, #218838 0%, #17a085 100%);
             }
-            a, .pub-link, .project-link.github {
+            a, .project_link, .project-link.github {
                 /* color: #222; */
                 background: none;
                 /* border-radius: 6px; */
@@ -551,7 +538,7 @@
                 gap: 0.3em;
                 box-shadow: none;
                 border: none;
-                font-size: 0.95em;
+                font-size: 0.9em;
                 /* text-decoration: underline; */
                 transition: color 0.2s, background 0.2s;
             }
@@ -580,7 +567,7 @@
                 gap: 1rem;
                 margin: 0;
                 padding: 1.5rem;
-                background: #ffffff;
+                background: white;
                 border-radius: 12px;
                 transition: all 0.3s ease;
             }
@@ -703,13 +690,13 @@
                     background: transparent;
                     border: none;
                     backdrop-filter: none;
-                    color: #ffffff;
+                    color: white;
                     text-decoration: none;
                 }
                 .nav-links a:hover {
                     background: rgba(255, 255, 255, 0.1);
                     border: none;
-                    color: #ffffff;
+                    color: white;
                 }
                 .site-title {
                     font-size: 2rem;
@@ -748,10 +735,6 @@
                     text-align: center;
                     gap: 1rem;
                     padding: 2rem 1rem;
-                }
-                .submit-btn {
-                    width: 100%;
-                    justify-content: center;
                 }
             }
             /* Animation Keyframes */
