@@ -1,0 +1,43 @@
+// Card styles
+.card {
+  display: flex;
+  gap: $spacing-lg;
+  position: relative;
+  background: white;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  transition: $transition-base;
+  border: 1px solid $border-light;
+  flex-direction: column;
+  height: 100%;
+
+  &:hover {
+    @include card-hover;
+  }
+}
+
+// Profile card specific styles
+.profile-card {
+  background: white;
+  box-shadow: none;
+  transition: none;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 0;
+}
+
+.profile-social {
+  width: 36px;
+  height: 36px;
+  @include flex-center;
+  font-size: 1.35rem;
+  position: relative;
+  text-decoration: none;
+  background: none;
+  border: none;
+  transition: $transition-fast;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

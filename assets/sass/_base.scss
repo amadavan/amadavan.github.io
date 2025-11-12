@@ -1,0 +1,97 @@
+// Base styles
+* {
+  margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  line-height: $line-height-base;
+  margin: 0;
+  padding: 0;
+  background-color: $background-white;
+  color: #333333;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.2rem 0.5rem;
+  flex: 1;
+  background: $background-white;
+  box-shadow: none;
+  border: none;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  margin: 1em 0 0.5em 0;
+  color: #222;
+}
+
+h1 {
+  color: $text-primary;
+  font-size: 2.2rem;
+  margin-bottom: $spacing-md;
+}
+
+h2 {
+  color: $text-primary;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: $spacing-xl;
+  margin-bottom: $spacing-md;
+  padding-top: $spacing-md;
+
+  &:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: $spacing-xl;
+  }
+}
+
+h3 {
+  color: $text-primary;
+  font-size: 1.3rem;
+  margin-top: $spacing-lg;
+  margin-bottom: 0.2rem;
+}
+
+// Links
+a {
+  color: $link-color;
+
+  &:hover {
+    color: $link-hover;
+  }
+}
+
+// Code
+code {
+  background-color: $background-light;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: $font-family-mono;
+}
+
+// Blockquotes
+blockquote {
+  border-left: 4px solid $link-color;
+  margin: $spacing-md 0;
+  padding-left: $spacing-md;
+  color: #555;
+}
+
+// Utilities
+.hidden {
+  display: none;
+}

@@ -1,0 +1,20 @@
+// Mixins
+@mixin card-hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+@mixin hover-background($color, $opacity: 0.15) {
+  background: rgba($color, $opacity);
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin touch-target {
+  min-width: $touch-target-min;
+  min-height: $touch-target-min;
+}

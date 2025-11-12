@@ -4,9 +4,10 @@ Usage: {% include "publications.liquid" pub=pub type=type %}
 {%- endcomment -%}
 <div class="publication-card card">
   <div class="pub-card-content">
+    <div class="pub-year-badge">{{ pub.year }}</div>
     <h3 class="pub-card-title">{{ pub.title | remove: '"' | remove: '{' | remove: '}' }}</h3>
     {%- if pub.author -%}
-    <div class="pub-authors">{{ pub.author | replace: ' and ', ', ' | replace: 'Madavan, Avinash N', '<strong style="color:#6a1b9a">Madavan, Avinash N</strong>' }}</div>
+    <div class="pub-authors">{{ pub.author | replace: ' and ', ', ' | replace: 'Madavan, Avinash N', '<strong>Madavan, Avinash N</strong>' }}</div>
     {%- endif -%}
   {%- if type == 'presentation' and pub.presented_at -%}
   <div class="pub-venue"><i class="fa-solid fa-person-chalkboard"></i> <em>{{ pub.presented_at }}</em></div>
@@ -16,55 +17,55 @@ Usage: {% include "publications.liquid" pub=pub type=type %}
   {%- endif -%}
     <div class="pub-venue">
       {%- if type == 'article' -%}
-        <i class="fas fa-book" style="color:#6a1b9a"></i>
+        <i class="fas fa-book"></i>
         <em>{{ pub.journal | default: "Manuscript" }}</em>{% if pub.volume %}, Vol. {{ pub.volume }}{% endif %}{% if pub.number %}({{ pub.number }}){% endif %}{% if pub.pages %}, pp. {{ pub.pages | replace: '--', '–' }}{% endif %}
       {%- elsif type == 'inproceedings' -%}
-        <i class="fas fa-users" style="color:#6a1b9a"></i>
+        <i class="fas fa-users"></i>
         <em>{{ pub.booktitle | remove: '"' | remove: '{' | remove: '}' }}</em>{% if pub.pages %}, pp. {{ pub.pages | replace: '--', '–' }}{% endif %}
       {%- elsif type == 'phdthesis' or type == 'mastersthesis' -%}
-        <i class="fas fa-graduation-cap" style="color:#6a1b9a"></i>
+        <i class="fas fa-graduation-cap"></i>
         {{ pub.school }}
       {%- elsif type == 'incollection' -%}
-        <i class="fas fa-book-open" style="color:#6a1b9a"></i>
+        <i class="fas fa-book-open"></i>
         In <em>{{ pub.booktitle | remove: '"' | remove: '{' | remove: '}' }}</em>{% if pub.pages %}, pp. {{ pub.pages | replace: '--', '–' }}{% endif %}{% if pub.publisher %}. {{ pub.publisher }}{% endif %}
       {%- endif -%}
     </div>
     {%- if pub.organization and type == 'inproceedings' -%}
     <div class="pub-organization">{{ pub.organization }}</div>
     {%- endif -%}
-    <div class="pub-card-links" style="position: relative;">
+    <div class="pub-card-links">
       {%- assign has_links = false -%}
-      {%- if pub.doi or pub.url or pub.arXiv or pub.pdf or pub.slides or pub.poster or pub.presentation or pub.external -%}{% assign has_links = true -%}{%- endif -%}
-      <div class="pub-links-row" style="display: flex; flex-wrap: wrap; gap: 0.5em; align-items: center;">
+      {%- if pub.doi or pub.url or pub.arXiv or pub.pdf or pub.slides or pub.poster or pub.presentation or pub.external or pub.pptx -%}{% assign has_links = true -%}{%- endif -%}
+      {%- if has_links -%}
+      <div class="pub-links-row">
         {%- if pub.pptx -%}
-          <a href="/assets/presentations/{{ pub.pptx }}" target="_blank" class="pub-link project-link ppt" style="display: inline-flex; align-items: center; margin: 0;"> <i class="fa-regular fa-file"></i> PowerPoint</a>
+          <a href="/assets/presentations/{{ pub.pptx }}" target="_blank" class="pub-link project-link ppt"><i class="fa-regular fa-file"></i> PowerPoint</a>
         {%- endif -%}
         {%- if pub.doi -%}
-          <a href="https://doi.org/{{ pub.doi }}" target="_blank" class="pub-link project-link doi" style="display: inline-flex; align-items: center; margin: 0;"> <i class="fa-solid fa-hashtag"></i> DOI</a>
+          <a href="https://doi.org/{{ pub.doi }}" target="_blank" class="pub-link project-link doi"><i class="fa-solid fa-hashtag"></i> DOI</a>
         {%- endif -%}
         {%- if pub.url -%}
-          <a href="{{ pub.url }}" target="_blank" class="pub-link project-link" style="display: inline-flex; align-items: center; margin: 0;"> <i class="fa-solid fa-link"></i> Link</a>
+          <a href="{{ pub.url }}" target="_blank" class="pub-link project-link"><i class="fa-solid fa-link"></i> Link</a>
         {%- elsif pub.arXiv -%}
-          <a href="{{ pub.arXiv }}" target="_blank" class="pub-link project-link arxiv" style="display: inline-flex; align-items: center; margin: 0;"> <i class="fa-regular fa-file-lines"></i> arXiv</a>
+          <a href="{{ pub.arXiv }}" target="_blank" class="pub-link project-link arxiv"><i class="fa-regular fa-file-lines"></i> arXiv</a>
         {%- endif -%}
         {%- if pub.pdf -%}
-          <a href="/assets/papers/{{ pub.pdf }}" target="_blank" class="pub-link project-link pdf" style="display: inline-flex; align-items: center; margin: 0;"> <i class="fa-regular fa-file-pdf"></i> PDF</a>
+          <a href="/assets/papers/{{ pub.pdf }}" target="_blank" class="pub-link project-link pdf"><i class="fa-regular fa-file-pdf"></i> PDF</a>
         {%- endif -%}
         {%- if pub.slides -%}
-          <a href="/assets/presentations/{{ pub.slides }}" target="_blank" class="pub-link project-link slides" style="display: inline-flex; align-items: center; margin: 0;"> <i class="fa-solid fa-chart-line"></i> Slides</a>
+          <a href="/assets/presentations/{{ pub.slides }}" target="_blank" class="pub-link project-link slides"><i class="fa-solid fa-chart-line"></i> Slides</a>
         {%- endif -%}
         {%- if pub.poster -%}
-          <a href="/assets/presentations/{{ pub.poster }}" target="_blank" class="pub-link project-link poster" style="display: inline-flex; align-items: center; margin: 0;"> <i class="fa-regular fa-image"></i> Poster</a>
+          <a href="/assets/presentations/{{ pub.poster }}" target="_blank" class="pub-link project-link poster"><i class="fa-regular fa-image"></i> Poster</a>
         {%- endif -%}
         {%- if pub.presentation -%}
-          <a href="{{ pub.presentation }}" target="_blank" class="pub-link project-link video" style="display: inline-flex; align-items: center; margin: 0;"> <i class="fa-regular fa-circle-play"></i> Presentation</a>
+          <a href="{{ pub.presentation }}" target="_blank" class="pub-link project-link video"><i class="fa-regular fa-circle-play"></i> Presentation</a>
         {%- endif -%}
         {%- if pub.external -%}
-          <a href="{{ pub.external }}" target="_blank" class="pub-link project-link external" style="display: inline-flex; align-items: center; margin: 0;"> <i class="fa-regular fa-compass"></i> External</a>
+          <a href="{{ pub.external }}" target="_blank" class="pub-link project-link external"><i class="fa-regular fa-compass"></i> External</a>
         {%- endif -%}
       </div>
-      {%- unless has_links -%}<span style="min-height: 2.2em"></span>{%- endunless -%}
-      <div style="position: absolute; right: 0; bottom: 0.1em; font-size: 0.95em; color: #888; padding: 0.2em 0.7em;">{{ pub.year }}</div>
+      {%- endif -%}
     </div>
   </div>
 </div>
