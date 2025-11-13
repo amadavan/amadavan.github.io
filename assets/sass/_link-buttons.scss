@@ -1,0 +1,96 @@
+// Shared link button styles for publications and projects
+.pub-link,
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-0-4;
+  background: $text-muted;
+  color: white;
+  text-decoration: none;
+  padding: $spacing-0-3 $spacing-0-9;
+  border-radius: $radius-xl;
+  font-size: $font-size-sm;
+  font-weight: 500;
+  transition: $transition-base;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: $shadow-hover-sm;
+  }
+
+  i {
+    margin-right: $spacing-0-4;
+    font-size: 0.9em;
+  }
+
+  // Link colors by type
+  &[href$=".pdf"],
+  &.pdf {
+    background: $color-pdf !important;
+
+    &:hover {
+      background: $color-pdf-hover !important;
+    }
+  }
+
+  &[href*="github"] {
+    background: $color-github;
+
+    &:hover {
+      background: $color-github-hover;
+    }
+  }
+
+  &[href*="paper"],
+  &[href*="ieee"],
+  &[href*="doi"],
+  &.doi {
+    background: $color-doi;
+
+    &:hover {
+      background: $color-doi-hover;
+    }
+  }
+
+  &.arxiv,
+  &[href*="arxiv"] {
+    background: $color-arxiv;
+
+    &:hover {
+      background: $color-arxiv-hover;
+    }
+  }
+
+  &.slides,
+  &.poster {
+    background: $color-slides;
+
+    &:hover {
+      background: $color-slides-hover;
+    }
+  }
+
+  &.video {
+    background: $color-video;
+
+    &:hover {
+      background: $color-video-hover;
+    }
+  }
+
+  &.ppt {
+    background: $color-ppt;
+
+    &:hover {
+      background: $color-ppt-hover;
+    }
+  }
+
+  &.external {
+    background: $color-external;
+
+    &:hover {
+      background: $color-external-hover;
+    }
+  }
+}

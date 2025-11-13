@@ -2,8 +2,8 @@
 .publications-list {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  margin: 0 0 2.4rem 0;
+  gap: $spacing-lg;
+  margin: 0 0 $spacing-xxl 0;
 }
 
 .publication-card {
@@ -14,8 +14,8 @@
   position: absolute;
   top: $spacing-lg;
   right: $spacing-lg;
-  font-size: 0.85rem;
-  color: $text-light;
+  font-size: $font-size-sm;
+  color: $text-muted;
 }
 
 .pub-card-content {
@@ -28,7 +28,7 @@
 }
 
 .pub-card-title {
-  font-size: 1.15rem;
+  font-size: $font-size-lg;
   font-weight: 500;
   color: $text-primary;
   margin: 0;
@@ -38,7 +38,7 @@
 
 .pub-authors {
   color: $text-secondary;
-  font-size: 0.95rem;
+  font-size: $font-size-md;
   line-height: 1.5;
 
   strong {
@@ -48,8 +48,8 @@
 }
 
 .pub-venue {
-  color: #495057;
-  font-size: 0.95rem;
+  color: $text-secondary;
+  font-size: $font-size-md;
   display: flex;
   align-items: flex-start;
   gap: $spacing-xs;
@@ -57,14 +57,14 @@
 
   i {
     color: $primary-color;
-    margin-top: 0.2rem;
+    margin-top: $spacing-0-2;
     flex-shrink: 0;
   }
 }
 
 .pub-organization {
   color: $text-secondary;
-  font-size: 0.9rem;
+  font-size: $font-size-base;
   font-style: italic;
 }
 
@@ -73,7 +73,7 @@
   gap: $spacing-xs;
   flex-wrap: wrap;
   padding-top: $spacing-md;
-  border-top: 1px solid $border-color;
+  border-top: $border-width solid $border-color;
   justify-content: flex-start;
 }
 
@@ -105,7 +105,14 @@
   }
 
   .pub-card-title {
-    font-size: 1.05rem;
+    font-size: $font-size-md;
+    padding-right: 3rem; // Less padding on mobile
+  }
+
+  .pub-year-badge {
+    top: $spacing-md;
+    right: $spacing-md;
+    font-size: $font-size-xs;
   }
 
   .pub-card-links {

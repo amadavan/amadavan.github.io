@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: $background-white;
-  color: #333333;
+  color: $text-primary;
   min-height: 100vh;
 }
 
@@ -35,7 +35,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   margin: 1em 0 0.5em 0;
-  color: #222;
+  color: $text-primary;
 }
 
 h1 {
@@ -88,7 +88,7 @@ blockquote {
   border-left: 4px solid $link-color;
   margin: $spacing-md 0;
   padding-left: $spacing-md;
-  color: #555;
+  color: $text-secondary;
 }
 
 // Utilities

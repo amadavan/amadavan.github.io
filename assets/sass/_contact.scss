@@ -2,7 +2,7 @@
 .contact-methods {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 0.7rem;
+  gap: $spacing-0-7;
   margin: 0 0;
   padding: 0 $spacing-lg 0 $spacing-lg;
 }
@@ -13,7 +13,7 @@
   gap: $spacing-md;
   margin: 0;
   padding: $spacing-lg;
-  background: white;
+  background: $background-white;
   border-radius: $radius-lg;
   transition: $transition-base;
 
@@ -22,7 +22,7 @@
     border-color: $primary-color;
 
     i {
-      color: $primary-dark;
+      color: $primary-hover;
       transform: scale(1.1);
     }
   }
@@ -45,7 +45,7 @@
 
   p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: $font-size-base;
     color: $text-secondary;
   }
 
@@ -68,7 +68,7 @@
 
   p {
     margin: 0 0 $spacing-md 0;
-    font-size: 0.95rem;
+    font-size: $font-size-md;
     line-height: 1.5;
 
     &:last-child {

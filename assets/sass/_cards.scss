@@ -3,11 +3,11 @@
   display: flex;
   gap: $spacing-lg;
   position: relative;
-  background: white;
+  background: $background-white;
   border-radius: $radius-lg;
   overflow: hidden;
   transition: $transition-base;
-  border: 1px solid $border-light;
+  border: $border-width solid $border-color;
   flex-direction: column;
   height: 100%;
 
@@ -18,7 +18,7 @@
 
 // Profile card specific styles
 .profile-card {
-  background: white;
+  background: $background-white;
   box-shadow: none;
   transition: none;
   max-width: 600px;

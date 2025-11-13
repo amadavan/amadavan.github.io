@@ -1,0 +1,48 @@
+// Accessibility styles
+
+// Respect user's motion preferences
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  // Disable specific animations
+  .main-title,
+  .role-title,
+  .subtitle,
+  .social-links,
+  .social-link {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+// Focus visible styles for keyboard navigation
+*:focus-visible {
+  outline: 2px solid $primary-color;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+// Skip to main content link
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: $spacing-md;
+  background: $primary-color;
+  color: white;
+  text-decoration: none;
+  border-radius: $radius-md;
+
+  &:focus {
+    left: $spacing-md;
+    top: $spacing-md;
+  }
+}

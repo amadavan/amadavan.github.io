@@ -1,7 +1,7 @@
 // Navigation styles
 .header {
   background: $background-white;
-  padding: 0 $spacing-xl;
+  padding: $spacing-md $spacing-xl 0 $spacing-xl;
   margin-bottom: 0;
   text-align: center;
   color: $text-primary;
@@ -9,9 +9,9 @@
 
 .site-title {
   margin: 0 0 $spacing-lg 0;
-  font-size: 2.5rem;
+  font-size: $font-size-7xl;
   font-weight: 300;
-  color: white;
+  color: $color-white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 
   a {
@@ -50,8 +50,8 @@
   }
 
   span {
-    width: 20px;
-    height: 2px;
+    width: $hamburger-line-width;
+    height: $hamburger-line-height;
     background: $primary-color;
     display: block;
     transition: 0.3s;
@@ -95,7 +95,7 @@
     &:hover {
       @include hover-background($primary-color);
       border: none;
-      color: $primary-dark;
+      color: $primary-hover;
     }
   }
 }
@@ -159,11 +159,11 @@
   }
 
   .site-title {
-    font-size: 2rem;
+    font-size: $font-size-5xl;
     margin-bottom: $spacing-md;
   }
 
   .header {
-    padding: $spacing-md $spacing-md;
+    padding: $spacing-md $spacing-md 0 $spacing-md;
   }
 }

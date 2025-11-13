@@ -8,45 +8,45 @@
   text-align: center;
 
   .error-code {
-    font-size: 4rem;
+    font-size: $font-size-9xl;
     font-weight: 700;
     color: $primary-light;
     margin-bottom: $spacing-md;
   }
 
   .error-message {
-    font-size: 1.5rem;
-    color: #555;
+    font-size: $font-size-3xl;
+    color: $text-secondary;
     margin-bottom: $spacing-xl;
   }
 
   .error-home-link {
     display: inline-block;
     padding: $spacing-sm $spacing-xl;
-    background: linear-gradient(90deg, $primary-light 0%, #3949ab 100%);
-    color: #fff;
-    border-radius: 30px;
+    background: $gradient-button;
+    color: $color-white;
+    border-radius: $radius-xxl;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    font-size: $font-size-lg;
+    box-shadow: $shadow-sm;
     transition: background 0.2s;
 
     &:hover {
-      background: linear-gradient(90deg, darken($primary-light, 5%) 0%, darken(#3949ab, 5%) 100%);
+      background: linear-gradient(90deg, darken(#6a1b9a, 5%) 0%, darken(#3949ab, 5%) 100%);
       transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      box-shadow: $shadow-md;
     }
   }
 
   .error-hint {
-    margin-top: 2.5rem;
-    color: #aaa;
+    margin-top: $spacing-xxl;
+    color: $text-muted;
     font-size: $spacing-md;
 
     i {
-      font-size: 2rem;
-      color: #b39ddb;
+      font-size: $font-size-5xl;
+      color: $primary-light;
     }
 
     .error-hint-text {

@@ -1,7 +1,7 @@
 // Mixins
 @mixin card-hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: $shadow-lg;
 }
 
 @mixin hover-background($color, $opacity: 0.15) {
