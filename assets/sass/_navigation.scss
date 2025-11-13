@@ -37,30 +37,30 @@
   cursor: pointer;
   padding: 8px;
   margin: 0 auto;
-  width: 36px;
-  height: 36px;
-  justify-content: space-between;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
   align-items: center;
+  gap: 4px;
   transition: $transition-base;
   position: relative;
 
   &:hover {
     @include hover-background($primary-color);
-    transform: scale(1.1);
   }
 
   span {
-    width: $hamburger-line-width;
-    height: $hamburger-line-height;
+    width: 18px;
+    height: 2px;
     background: $primary-color;
     display: block;
-    transition: 0.3s;
+    transition: 0.3s ease;
     border-radius: 1px;
   }
 
   &.active {
     span:nth-child(1) {
-      transform: rotate(-45deg) translate(-5px, 6px);
+      transform: rotate(45deg) translate(4px, 4px);
     }
 
     span:nth-child(2) {
@@ -68,7 +68,7 @@
     }
 
     span:nth-child(3) {
-      transform: rotate(45deg) translate(-5px, -6px);
+      transform: rotate(-45deg) translate(4px, -4px);
     }
   }
 }
@@ -139,6 +139,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: $spacing-xs;
       padding: 0.875rem $spacing-lg;
       margin: 0.25rem $spacing-md;
       border-radius: $radius-md;

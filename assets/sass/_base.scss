@@ -22,34 +22,50 @@ body {
 }
 
 .content-wrapper {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 1.2rem 0.5rem;
+  padding: $spacing-xl $spacing-lg;
   flex: 1;
   background: $background-white;
   box-shadow: none;
   border: none;
 }
 
-// Typography
+// Constrain text-heavy content to 900px for readability
+// Used on about and resume pages - wraps text content for better reading width
+.content > p,
+.content > h1,
+.content > h2,
+.content > h3,
+.content > h4,
+.content > h5,
+.content > h6,
+.content > ul,
+.content > ol,
+.content > blockquote,
+.content > div:not(.projects-grid) {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Typography - 1.25 scale ratio
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
-  margin: 1em 0 0.5em 0;
   color: $text-primary;
+  line-height: 1.3;
 }
 
 h1 {
-  color: $text-primary;
-  font-size: 2.2rem;
-  margin-bottom: $spacing-md;
+  font-size: 2.441rem;  // 1.25^4
+  margin: 0 0 $spacing-lg 0;
+  font-weight: 500;
 }
 
 h2 {
-  color: $text-primary;
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-top: $spacing-xl;
-  margin-bottom: $spacing-md;
+  font-size: 1.953rem;  // 1.25^3
+  margin: $spacing-xxl 0 $spacing-md 0;
+  font-weight: 500;
   padding-top: $spacing-md;
 
   &:first-of-type {
@@ -60,10 +76,25 @@ h2 {
 }
 
 h3 {
-  color: $text-primary;
-  font-size: 1.3rem;
-  margin-top: $spacing-lg;
-  margin-bottom: 0.2rem;
+  font-size: 1.563rem;  // 1.25^2
+  margin: $spacing-xl 0 $spacing-sm 0;
+}
+
+h4 {
+  font-size: 1.25rem;   // 1.25^1
+  margin: $spacing-lg 0 $spacing-sm 0;
+}
+
+h5 {
+  font-size: 1rem;      // 1.25^0
+  margin: $spacing-md 0 $spacing-xs 0;
+}
+
+h6 {
+  font-size: 0.8rem;    // 1.25^-1
+  margin: $spacing-md 0 $spacing-xs 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 // Links

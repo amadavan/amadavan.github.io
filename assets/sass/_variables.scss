@@ -1,21 +1,22 @@
-// Primary Colors - Core brand colors
-$primary-color: #5e35b1;        // Main purple
-$primary-hover: #4527a0;        // Darker purple for hover states
-$primary-light: #7e57c2;        // Lighter purple for links and accents
+// Primary Colors - Core brand colors derived from single base
+$primary-base: #5e35b1;                           // Base purple
+$primary-color: $primary-base;                    // Main purple (same as base)
+$primary-hover: darken($primary-base, 8%);        // Darker purple for hover states
+$primary-light: lighten($primary-base, 12%);      // Lighter purple for links and accents
+$primary-lighter: lighten($primary-base, 25%);    // Very light purple for backgrounds
 
-// Gradients
-$accent-gradient: linear-gradient(135deg, $primary-light, $primary-hover, #667eea);
-$gradient-button: linear-gradient(90deg, #6a1b9a 0%, #3949ab 100%);
+// Gradients - derived from primary colors
+$accent-gradient: linear-gradient(135deg, $primary-light, $primary-hover);
+$gradient-button: linear-gradient(90deg, $primary-color, darken($primary-color, 5%));
 
-// Text Colors - Consolidated to 3 semantic levels
-$text-primary: #2c3e50;         // Main headings and important text
-$text-secondary: #6c757d;       // Secondary text, metadata, authors
-$text-muted: #adb5bd;           // De-emphasized text, placeholders
+// Text Colors - True neutral grays (no color tint)
+$text-primary: #2d2d2d;         // Main headings and important text
+$text-secondary: #6a6a6a;       // Secondary text, metadata, authors
+$text-muted: #a0a0a0;           // De-emphasized text, placeholders
 
 // Background Colors
 $background-white: #ffffff;
 $background-light: #f1f2f6;
-$background-purple-light: #f3e5f5;
 
 // Border Colors
 $border-color: #e0e0e0;         // Standard borders
@@ -27,23 +28,38 @@ $link-hover: $primary-color;    // Deeper purple on hover
 // UI colors
 $color-white: #fff;
 
-// Link type colors
+// Link type colors - Brand-specific and representative
+// PDF - Red (universal PDF color)
 $color-pdf: #d32f2f;
-$color-pdf-hover: #b71c1c;
-$color-github: #0969da;
-$color-github-hover: #0550ae;
-$color-doi: #2196f3;
-$color-doi-hover: #1976d2;
+$color-pdf-hover: darken($color-pdf, 10%);
+
+// arXiv - Dark red/maroon (arXiv brand color)
 $color-arxiv: #b31b1b;
-$color-arxiv-hover: #8b0000;
-$color-slides: #ff6f00;
-$color-slides-hover: #e65100;
-$color-video: #ff0000;
-$color-video-hover: #cc0000;
+$color-arxiv-hover: darken($color-arxiv, 10%);
+
+// GitHub - Blue (GitHub brand color)
+$color-github: #0969da;
+$color-github-hover: darken($color-github, 10%);
+
+// DOI - Blue (academic/reliable)
+$color-doi: #2196f3;
+$color-doi-hover: darken($color-doi, 10%);
+
+// Slides/Posters - Teal (presentation materials)
+$color-slides: #00897b;
+$color-slides-hover: darken($color-slides, 10%);
+
+// PowerPoint - Orange-red (Microsoft PPT color)
 $color-ppt: #d04423;
-$color-ppt-hover: #a83214;
-$color-external: #6c757d;
-$color-external-hover: #5a6268;
+$color-ppt-hover: darken($color-ppt, 10%);
+
+// Video - Red (YouTube/video standard)
+$color-video: #ff0000;
+$color-video-hover: darken($color-video, 10%);
+
+// External/Other - Gray (neutral)
+$color-external: $text-secondary;
+$color-external-hover: darken($color-external, 10%);
 
 // Spacing
 $spacing-xs: 0.5rem;    // 8px

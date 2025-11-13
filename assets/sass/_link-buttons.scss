@@ -23,7 +23,9 @@
     font-size: 0.9em;
   }
 
-  // Link colors by type
+  // Link colors by type - Brand-specific and representative
+
+  // PDF - Red (universal PDF color)
   &[href$=".pdf"],
   &.pdf {
     background: $color-pdf !important;
@@ -33,6 +35,17 @@
     }
   }
 
+  // arXiv - Dark red/maroon (arXiv brand)
+  &.arxiv,
+  &[href*="arxiv"] {
+    background: $color-arxiv;
+
+    &:hover {
+      background: $color-arxiv-hover;
+    }
+  }
+
+  // GitHub - Blue (GitHub brand)
   &[href*="github"] {
     background: $color-github;
 
@@ -41,6 +54,7 @@
     }
   }
 
+  // DOI - Blue (academic/reliable)
   &[href*="paper"],
   &[href*="ieee"],
   &[href*="doi"],
@@ -52,15 +66,7 @@
     }
   }
 
-  &.arxiv,
-  &[href*="arxiv"] {
-    background: $color-arxiv;
-
-    &:hover {
-      background: $color-arxiv-hover;
-    }
-  }
-
+  // Slides/Posters - Teal (presentation materials)
   &.slides,
   &.poster {
     background: $color-slides;
@@ -70,14 +76,7 @@
     }
   }
 
-  &.video {
-    background: $color-video;
-
-    &:hover {
-      background: $color-video-hover;
-    }
-  }
-
+  // PowerPoint - Orange-red (Microsoft PPT)
   &.ppt {
     background: $color-ppt;
 
@@ -86,6 +85,17 @@
     }
   }
 
+  // Video - Red (YouTube/video standard)
+  &.video,
+  &[href*="presentation"] {
+    background: $color-video;
+
+    &:hover {
+      background: $color-video-hover;
+    }
+  }
+
+  // External/Other - Gray (neutral)
   &.external {
     background: $color-external;
 

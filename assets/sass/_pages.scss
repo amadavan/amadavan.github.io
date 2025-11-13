@@ -15,10 +15,10 @@
 .footer {
   margin-top: auto;
   padding-top: $spacing-xl;
-  border-top: 1px solid $border-color;
+  border-top: $border-width solid $border-color;
   text-align: center;
-  color: #666666;
-  font-size: 0.9rem;
+  color: $text-secondary;
+  font-size: $font-size-base;
 }
 
 // PDF embed styling

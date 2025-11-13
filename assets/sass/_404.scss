@@ -23,18 +23,19 @@
   .error-home-link {
     display: inline-block;
     padding: $spacing-sm $spacing-xl;
-    background: $gradient-button;
+    background: $primary-color;
     color: $color-white;
-    border-radius: $radius-xxl;
+    border-radius: $radius-lg;
     text-decoration: none;
     font-weight: 500;
     font-size: $font-size-lg;
-    box-shadow: $shadow-sm;
-    transition: background 0.2s;
+    border: $border-width solid $primary-color;
+    transition: $transition-base;
 
     &:hover {
-      background: linear-gradient(90deg, darken(#6a1b9a, 5%) 0%, darken(#3949ab, 5%) 100%);
-      transform: translateY(-1px);
+      background: $background-white;
+      color: $primary-color;
+      transform: translateY(-2px);
       box-shadow: $shadow-md;
     }
   }

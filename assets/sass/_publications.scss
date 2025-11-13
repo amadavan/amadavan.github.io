@@ -2,8 +2,9 @@
 .publications-list {
   display: flex;
   flex-direction: column;
-  gap: $spacing-lg;
-  margin: 0 0 $spacing-xxl 0;
+  gap: $spacing-xl;
+  margin: 0 auto $spacing-xxl auto;
+  max-width: 900px;
 }
 
 .publication-card {
@@ -28,11 +29,11 @@
 }
 
 .pub-card-title {
-  font-size: $font-size-lg;
+  font-size: 1.25rem;  // h4 from 1.25 scale
   font-weight: 500;
   color: $text-primary;
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.3;
   padding-right: 4rem;
 }
 
@@ -87,7 +88,7 @@
 // Mobile styles
 @media (max-width: $breakpoint-mobile) {
   .publications-list {
-    gap: $spacing-lg;
+    gap: $spacing-xl;
   }
 
   .publication-card {
@@ -101,7 +102,7 @@
   }
 
   .pub-card-content {
-    padding: $spacing-md;
+    padding: $spacing-xl;  // More padding on mobile, not less
   }
 
   .pub-card-title {

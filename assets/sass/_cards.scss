@@ -21,7 +21,7 @@
   background: $background-white;
   box-shadow: none;
   transition: none;
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
   gap: 0;
 }
@@ -35,9 +35,21 @@
   text-decoration: none;
   background: none;
   border: none;
+  border-radius: $radius-circle;
   transition: $transition-fast;
 
   &:hover {
     transform: scale(1.1);
+  }
+  
+  &:hover {
+    @include hover-background($primary-color);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: $shadow-hover-purple;
+    color: $primary-hover;
+
+    &::after {
+      opacity: 1;
+    }
   }
 }
