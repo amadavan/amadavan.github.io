@@ -20,15 +20,15 @@
   margin: $spacing-xxl 0 $spacing-xl 0;
 
   i {
-    font-size: $font-size-xl;
+    font-size: $font-size-lg;
     color: $accent-color;
     flex-shrink: 0;
   }
 
   h2 {
     font-family: $font-heading;
-    font-size: $font-size-2xl;
-    font-weight: $font-weight-bold;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-medium;
     color: $text-primary;
     margin: 0;
     flex-shrink: 0;

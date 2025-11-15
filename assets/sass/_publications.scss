@@ -32,7 +32,7 @@
 .pub-card-title {
   font-family: $font-heading;
   font-size: $font-size-lg;
-  font-weight: $font-weight-semibold;
+  font-weight: $font-weight-medium;
   color: $text-primary;
   margin: 0;
   line-height: 1.3;
@@ -42,18 +42,18 @@
 
 .pub-authors {
   color: $text-secondary;
-  font-size: $font-size-md;
+  font-size: $font-size-base;
   line-height: 1.5;
 
   strong {
-    font-weight: 600;
+    font-weight: $font-weight-medium;
     color: $primary-color;
   }
 }
 
 .pub-venue {
   color: $text-secondary;
-  font-size: $font-size-md;
+  font-size: $font-size-base;
   display: flex;
   align-items: flex-start;
   gap: $spacing-sm;

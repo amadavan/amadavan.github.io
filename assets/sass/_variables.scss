@@ -9,11 +9,11 @@ $primary-hover: #7b1fa2;                          // Brighter purple for hover
 $primary-light: #9c27b0;                          // Light purple for accents
 $primary-lighter: #e1bee7;                        // Very light purple for backgrounds
 
-// Accent Colors - Warm orange for energy and contrast
-$accent-color: #ff6f00;                           // Deep orange
-$accent-hover: #ff8f00;                           // Lighter orange on hover
-$accent-light: #ffa726;                           // Light orange
-$accent-lighter: #ffe0b2;                         // Very light orange
+// Accent Colors - Refined orange for energy and contrast
+$accent-color: #f97316;                           // Softer orange
+$accent-hover: #fb923c;                           // Lighter orange on hover
+$accent-light: #fdba74;                           // Light orange
+$accent-lighter: #fed7aa;                         // Very light orange
 
 // Gradients - Purple to orange
 $accent-gradient: linear-gradient(135deg, $primary-color, $accent-color);
@@ -128,7 +128,7 @@ $shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
 $shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
 $shadow-hover-sm: 0 4px 8px rgba(0, 0, 0, 0.2);
 $shadow-hover-purple: 0 5px 15px rgba(106, 27, 154, 0.25);
-$shadow-hover-orange: 0 5px 15px rgba(255, 111, 0, 0.25);
+$shadow-hover-orange: 0 5px 15px rgba(249, 115, 22, 0.25);
 
 // ============================================================================
 // TYPOGRAPHY SYSTEM - Inter + Source Sans Pro

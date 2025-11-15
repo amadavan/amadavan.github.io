@@ -29,7 +29,7 @@ body {
 .main-title {
   font-family: $font-heading;
   font-size: $font-size-5xl;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-medium;
   letter-spacing: $letter-spacing-tight;
   margin-bottom: 0;
   opacity: 0;
@@ -46,8 +46,8 @@ body {
 
 .role-title {
   font-family: $font-heading;
-  font-size: $font-size-2xl;
-  font-weight: $font-weight-semibold;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-medium;
   letter-spacing: $letter-spacing-snug;
   margin-bottom: $spacing-lg;
   opacity: 0;
@@ -58,7 +58,7 @@ body {
 
 .subtitle {
   font-family: $font-body;
-  font-size: $font-size-lg;
+  font-size: $font-size-md;
   font-weight: $font-weight-normal;
   margin-bottom: $spacing-xxl;
   opacity: 0;
@@ -143,11 +143,11 @@ body {
   }
 
   .role-title {
-    font-size: $font-size-xl;
+    font-size: $font-size-lg;
   }
 
   .subtitle {
-    font-size: $font-size-md;
+    font-size: $font-size-base;
   }
 
   .social-link {
