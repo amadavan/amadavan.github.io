@@ -5,7 +5,7 @@ description: "Avinash Madavan's academic publications in optimization theory, po
 ---
 
 <!-- Journal Publications -->
-{% include "publication_list_header.liquid" title:"Journal Publications" %}
+{% include "publication_list_header.liquid" title:"Journal Publications", icon:"book" %}
 
 {% assign articles = site.data.publications | where: 'ENTRYTYPE', 'article' | sort: 'year' | reverse -%}
 <div class="publications-list">
@@ -15,7 +15,7 @@ description: "Avinash Madavan's academic publications in optimization theory, po
 </div>
 
 <!-- Conference Publications -->
-{% include "publication_list_header.liquid" title:"Conference Proceedings" %}
+{% include "publication_list_header.liquid" title:"Conference Proceedings", icon:"users" %}
 
 {% assign conferences = site.data.publications | where: 'ENTRYTYPE', 'inproceedings' | sort: 'year' | reverse -%}
 <div class="publications-list">
@@ -26,7 +26,7 @@ description: "Avinash Madavan's academic publications in optimization theory, po
 
 
 <!-- Dissertations -->
-{% include "publication_list_header.liquid" title:"Dissertations" %}
+{% include "publication_list_header.liquid" title:"Dissertations", icon:"graduation-cap" %}
 
 {% assign theses = site.data.publications | where: 'ENTRYTYPE', 'phdthesis' | sort: 'year' | reverse -%}
 <div class="publications-list">
@@ -43,7 +43,7 @@ description: "Avinash Madavan's academic publications in optimization theory, po
 </div>
 
 <!-- Book Chapters -->
-{% include "publication_list_header.liquid" title:"Book Chapters" %}
+{% include "publication_list_header.liquid" title:"Book Chapters", icon:"book-open" %}
 
 {% assign chapters = site.data.publications | where: 'ENTRYTYPE', 'incollection' | sort: 'year' | reverse -%}
 <div class="publications-list">
@@ -53,7 +53,7 @@ description: "Avinash Madavan's academic publications in optimization theory, po
 </div>
 
 <!-- Presentations -->
-{% include "publication_list_header.liquid" title:"Presentations" %}
+{% include "publication_list_header.liquid" title:"Presentations", icon:"person-chalkboard" %}
 
 {% assign presentations = site.data.presentations | sort: 'year' | reverse -%}
 <div class="publications-list">

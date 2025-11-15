@@ -1,32 +1,47 @@
-// Primary Colors - Core brand colors derived from single base
-$primary-base: #5e35b1;                           // Base purple
-$primary-color: $primary-base;                    // Main purple (same as base)
-$primary-hover: darken($primary-base, 8%);        // Darker purple for hover states
-$primary-light: lighten($primary-base, 12%);      // Lighter purple for links and accents
-$primary-lighter: lighten($primary-base, 25%);    // Very light purple for backgrounds
+// ============================================================================
+// COLOR SYSTEM - Deep Purple with Warm Orange Accent
+// ============================================================================
 
-// Gradients - derived from primary colors
-$accent-gradient: linear-gradient(135deg, $primary-light, $primary-hover);
-$gradient-button: linear-gradient(90deg, $primary-color, darken($primary-color, 5%));
+// Primary Colors - Richer purple with more depth
+$primary-base: #4a148c;                           // Deep purple
+$primary-color: #6a1b9a;                          // Rich purple (main brand)
+$primary-hover: #7b1fa2;                          // Brighter purple for hover
+$primary-light: #9c27b0;                          // Light purple for accents
+$primary-lighter: #e1bee7;                        // Very light purple for backgrounds
 
-// Text Colors - True neutral grays (no color tint)
-$text-primary: #2d2d2d;         // Main headings and important text
-$text-secondary: #6a6a6a;       // Secondary text, metadata, authors
-$text-muted: #a0a0a0;           // De-emphasized text, placeholders
+// Accent Colors - Warm orange for energy and contrast
+$accent-color: #ff6f00;                           // Deep orange
+$accent-hover: #ff8f00;                           // Lighter orange on hover
+$accent-light: #ffa726;                           // Light orange
+$accent-lighter: #ffe0b2;                         // Very light orange
+
+// Gradients - Purple to orange
+$accent-gradient: linear-gradient(135deg, $primary-color, $accent-color);
+$gradient-button: linear-gradient(90deg, $primary-color, $primary-hover);
+$gradient-hero: linear-gradient(135deg, $primary-light, $accent-color);
+
+// Text Colors - Warm dark grays with personality
+$text-primary: #1a1a1a;                           // Almost black with warmth
+$text-secondary: #5a5a5a;                         // Warm mid-gray
+$text-muted: #9e9e9e;                             // Warm light gray
 
 // Background Colors
 $background-white: #ffffff;
-$background-light: #f1f2f6;
+$background-light: #fafafa;                       // Very light neutral
+$background-purple-tint: #f5f3f7;                 // Subtle purple tint
+$background-orange-tint: #fff8f0;                 // Subtle orange tint
 
 // Border Colors
-$border-color: #e0e0e0;         // Standard borders
+$border-color: #e0e0e0;                           // Standard borders
+$border-accent: $primary-lighter;                 // Purple-tinted border
 
 // Link Colors
-$link-color: $primary-light;    // Purple to match theme
-$link-hover: $primary-color;    // Deeper purple on hover
+$link-color: $primary-color;                      // Purple links
+$link-hover: $primary-hover;                      // Brighter purple on hover
 
 // UI colors
 $color-white: #fff;
+$color-black: #000;
 
 // Link type colors - Brand-specific and representative
 // PDF - Red (universal PDF color)
@@ -61,13 +76,17 @@ $color-video-hover: darken($color-video, 10%);
 $color-external: $text-secondary;
 $color-external-hover: darken($color-external, 10%);
 
-// Spacing
+// ============================================================================
+// SPACING SYSTEM
+// ============================================================================
+
 $spacing-xs: 0.5rem;    // 8px
 $spacing-sm: 0.75rem;   // 12px
 $spacing-md: 1rem;      // 16px
 $spacing-lg: 1.5rem;    // 24px
 $spacing-xl: 2rem;      // 32px
 $spacing-xxl: 2.5rem;   // 40px
+$spacing-xxxl: 3rem;    // 48px
 
 // Additional spacing values
 $spacing-0-2: 0.2rem;   // 3.2px
@@ -77,7 +96,10 @@ $spacing-0-7: 0.7rem;   // 11.2px
 $spacing-0-875: 0.875rem; // 14px
 $spacing-0-9: 0.9rem;   // 14.4px
 
-// Border radius
+// ============================================================================
+// BORDER SYSTEM
+// ============================================================================
+
 $radius-sm: 6px;
 $radius-md: 8px;
 $radius-lg: 12px;
@@ -86,49 +108,75 @@ $radius-xxl: 30px;
 $radius-pill: 50px;
 $radius-circle: 50%;
 
-// Borders
 $border-width: 1px;
 $border-width-thick: 4px;
 
-// Transitions
+// ============================================================================
+// TRANSITIONS & ANIMATIONS
+// ============================================================================
+
 $transition-base: all 0.3s ease;
 $transition-fast: all 0.2s ease;
+$transition-slow: all 0.5s ease;
 
-// Shadows
+// ============================================================================
+// SHADOWS
+// ============================================================================
+
 $shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
 $shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
 $shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
 $shadow-hover-sm: 0 4px 8px rgba(0, 0, 0, 0.2);
-$shadow-hover-purple: 0 5px 15px rgba(94, 53, 177, 0.2);
+$shadow-hover-purple: 0 5px 15px rgba(106, 27, 154, 0.25);
+$shadow-hover-orange: 0 5px 15px rgba(255, 111, 0, 0.25);
 
-// Dimensions
+// ============================================================================
+// TYPOGRAPHY SYSTEM - Inter + Source Sans Pro
+// ============================================================================
+
+// Font Families
+$font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-body: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-mono: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
+
+// Font Weights
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Font Sizes - Distinctive scale
+$font-size-xs: 0.75rem;       // 12px - Fine print
+$font-size-sm: 0.875rem;      // 14px - Small text
+$font-size-base: 1rem;        // 16px - Body
+$font-size-md: 1.125rem;      // 18px - Large body
+$font-size-lg: 1.375rem;      // 22px - Lead / h5
+$font-size-xl: 1.75rem;       // 28px - h4
+$font-size-2xl: 2.25rem;      // 36px - h3
+$font-size-3xl: 3rem;         // 48px - h2
+$font-size-4xl: 4rem;         // 64px - h1
+$font-size-5xl: 5rem;         // 80px - Hero
+
+// Line Heights - More variation
+$line-height-tight: 1.2;      // Headings
+$line-height-snug: 1.4;       // Subheadings
+$line-height-base: 1.6;       // Body
+$line-height-relaxed: 1.8;    // Long-form reading
+
+// Letter Spacing
+$letter-spacing-tight: -0.02em;   // Large headings
+$letter-spacing-snug: -0.01em;    // Medium headings
+$letter-spacing-normal: 0;
+$letter-spacing-wide: 0.05em;     // Small caps, labels
+
+// ============================================================================
+// LAYOUT & DIMENSIONS
+// ============================================================================
+
 $hamburger-line-width: 20px;
 $hamburger-line-height: 2px;
+$touch-target-min: 44px;
 
 // Breakpoints
 $breakpoint-mobile: 1024px;
-
-// Typography
-$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-$font-family-mono: 'Monaco', 'Consolas', monospace;
-$line-height-base: 1.6;
-
-// Font sizes
-$font-size-xs: 0.7rem;    // 11.2px
-$font-size-sm: 0.85rem;   // 13.6px
-$font-size-base: 0.9rem;  // 14.4px
-$font-size-md: 0.95rem;   // 15.2px
-$font-size-lg: 1.1rem;    // 17.6px
-$font-size-xl: 1.3rem;    // 20.8px
-$font-size-2xl: 1.4rem;   // 22.4px
-$font-size-3xl: 1.5rem;   // 24px
-$font-size-4xl: 1.6rem;   // 25.6px
-$font-size-5xl: 2rem;     // 32px
-$font-size-6xl: 2.2rem;   // 35.2px
-$font-size-7xl: 2.5rem;   // 40px
-$font-size-8xl: 2.8rem;   // 44.8px
-$font-size-9xl: 4rem;     // 64px
-$font-size-10xl: 4.5rem;  // 72px
-
-// Touch targets
-$touch-target-min: 44px;
+$breakpoint-tablet: 768px;

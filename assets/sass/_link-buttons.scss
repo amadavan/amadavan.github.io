@@ -55,7 +55,6 @@
   }
 
   // DOI - Blue (academic/reliable)
-  &[href*="paper"],
   &[href*="ieee"],
   &[href*="doi"],
   &.doi {
@@ -63,6 +62,48 @@
 
     &:hover {
       background: $color-doi-hover;
+    }
+  }
+
+  // Paper - Green (academic paper)
+  &.paper,
+  &[href*="paper"] {
+    background: #28a745;
+    color: #fff;
+
+    &:hover {
+      background: darken(#28a745, 10%);
+    }
+  }
+
+  // Demo - Orange (interactive demo)
+  &.demo {
+    background: #ff9800;
+    color: #fff;
+
+    &:hover {
+      background: darken(#ff9800, 10%);
+    }
+  }
+
+  // Documentation - Purple (docs)
+  &.docs,
+  &[href*="documentation"] {
+    background: #8e24aa;
+    color: #fff;
+
+    &:hover {
+      background: darken(#8e24aa, 10%);
+    }
+  }
+
+  // Website - Teal (external website)
+  &.website {
+    background: #009688;
+    color: #fff;
+
+    &:hover {
+      background: darken(#009688, 10%);
     }
   }
 

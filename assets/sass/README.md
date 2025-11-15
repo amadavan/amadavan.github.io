@@ -58,7 +58,7 @@ Cobalt will automatically compile all `.scss` files in `assets/sass/` and output
 - **Text Dark**: `#555`
 
 ### Typography Scale
-- `$font-size-xs` through `$font-size-10xl` (0.7rem to 4.5rem)
+- `$font-size-xs` through `$font-size-5xl` (0.75rem to 5rem / 12px to 80px)
 - All sizes include pixel equivalents in comments
 
 ### Spacing Scale

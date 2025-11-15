@@ -12,42 +12,63 @@ description: "Learn about Avinash Madavan's background in optimization theory, m
 ---
 
 
-I'm a researcher and engineer who works at the intersection of optimization theory and practical systems. I develop scalable algorithms for complex decision-making problems and build production systems that actually work in the real world.
+I build algorithms that solve hard optimization problems and deploy them in production systems. My PhD research achieved **20-30x speedups** on power grid optimization and formed the foundation for an NSF CAREER award. Since then, I've shipped ML models for logistics, built risk-aware trading systems for energy markets, and contributed to open-source optimization tools.
 
-## What I Do
+<div class="section-header">
+  <i class="fas fa-briefcase"></i>
+  <h2>What I Do</h2>
+  <div class="header-line"></div>
+</div>
 
-My work focuses on **optimization under uncertainty** - developing rigorous mathematical methods that provide provable guarantees while scaling to real-world problem sizes. I care deeply about understanding complex systems, breaking them down into their constituent parts, and developing strategies to meaningfully control them.
+I specialize in **optimization under uncertainty** - problems where you need both mathematical guarantees and practical performance at scale.
 
-I completed my PhD in Electrical Engineering at the University of Illinois Urbana-Champaign, where I worked on risk-sensitive optimization for power networks. My research developed decomposition-based algorithms that achieved 20-30x speedups over traditional approaches, forming the technical foundation for my advisor's NSF CAREER award. This work resulted in publications in the *Journal of Optimization Theory and Applications* and *IEEE Transactions on Power Systems*.
+**Academic work (UIUC, 2017-2022)**: Developed decomposition algorithms for risk-sensitive power grid optimization. Published in *IEEE Transactions on Power Systems* and *Journal of Optimization Theory and Applications*. My algorithms cut solve times from hours to minutes, enabling real-time decision-making for grid operators.
 
-Since graduating, I've applied optimization and machine learning methods across multiple domains - power systems, logistics, and commodities trading. At Terminal49, I designed and deployed their first container ETA prediction model. At Equinor, I built risk-aware portfolio optimization algorithms for power trading. Throughout this work, I've learned that the value lies not just in finding optimal solutions, but in building reliable systems that handle real-world complexity.
+**Industry applications**: Designed Terminal49's first container ETA prediction model (logistics ML). Built risk-aware portfolio optimization for Equinor's power trading desk (energy markets). The common thread: taking methods with provable properties and making them work on real data with real constraints.
 
-## Research Interests
+The interesting problems aren't purely theoretical or purely applied - they're at the boundary where mathematical rigor meets production reliability.
 
-I'm particularly interested in problems where **mathematical rigor meets practical impact**:
+<div class="section-header">
+  <i class="fas fa-flask"></i>
+  <h2>Research Interests</h2>
+  <div class="header-line"></div>
+</div>
 
-- Large-scale optimization algorithms with provable guarantees
-- Statistical methods for uncertainty quantification in high-stakes systems
-- Risk-sensitive decision-making under uncertainty
-- Scalable computational methods for complex systems
-- Open-source scientific software and tools
+Right now, I'm focused on:
 
-Going forward, I'm excited about applying these methods to domains where reliability and accessibility matter - systems that improve how essential services are delivered and ensure equitable access to fundamental resources.
+- **Scalable optimization** with convergence guarantees that work on real problem sizes
+- **Uncertainty quantification** for high-stakes decisions (energy, infrastructure, logistics)
+- **Open-source tools** that make advanced methods accessible to practitioners
+- **Systems design** for algorithms that need to run reliably in production
 
-## Technical Approach
+I'm particularly interested in problems where getting it wrong has real consequences - power grids going down, supply chains breaking, critical resources being misallocated. These domains demand both mathematical rigor and practical robustness.
 
-I believe the most interesting problems live at the boundary between theory and practice. I develop algorithms with formal properties (convergence guarantees, complexity bounds, statistical validity) and implement them in systems that work at scale. This means thinking carefully about:
+<div class="section-header">
+  <i class="fas fa-code"></i>
+  <h2>Technical Approach</h2>
+  <div class="header-line"></div>
+</div>
 
-- **Mathematical foundations** - What can we prove about our methods?
-- **Computational efficiency** - How do we make this tractable for real problem sizes?
-- **Practical robustness** - How does this handle messy, real-world data?
-- **System design** - How do we build tools that others can actually use?
+Good optimization isn't just about finding the best answer - it's about finding answers you can trust, compute in reasonable time, and deploy in systems that won't break when data gets messy.
 
-I'm comfortable working across multiple levels of abstraction - from theoretical analysis to production deployment - and I value making methods accessible through open-source implementations.
+This means caring about:
 
-## What I Believe
+- **What you can prove**: Convergence guarantees, complexity bounds, statistical validity
+- **What actually runs**: Algorithms that scale to real problem sizes without requiring a supercomputer
+- **What stays reliable**: Methods that degrade gracefully when assumptions break
+- **What others can use**: Clean APIs, clear documentation, reproducible examples
 
-I believe in the value of rigorous thinking - both in technical work and in understanding society. Breaking down complex systems (whether mathematical or social) into their constituent parts helps us understand how they work and how we might improve them.
+I write code that goes into production, not just papers. All my research implementations are open source because I believe good methods should be accessible to anyone who needs them, not locked behind paywalls or institutional access.
 
-I believe that **good ideas should be accessible**. This drives my interest in open-source software, clear communication, and teaching - making powerful methods available to everyone, not just those with insider knowledge.
+<div class="section-header">
+  <i class="fas fa-lightbulb"></i>
+  <h2>What I Believe</h2>
+  <div class="header-line"></div>
+</div>
+
+**The best ideas are simple ones, rigorously executed.** Complexity is often a sign of unclear thinking. Breaking systems down into their fundamental pieces - whether those systems are mathematical models or social structures - is how we understand them and improve them.
+
+**Open source is non-negotiable.** If your method only works when you're the one running it, it's not a method - it's a performance. I publish code alongside papers because reproducibility matters and gatekeeping knowledge helps no one.
+
+**Impact requires deployment, not just discovery.** A brilliant algorithm that never leaves academia is a missed opportunity. A mediocre algorithm running in production and making better decisions every day is a success.
 

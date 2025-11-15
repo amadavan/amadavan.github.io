@@ -33,13 +33,13 @@
                     {%- assign lang = pair[0] -%}
                     {%- assign value = pair[1] -%}
                     {%- assign color = site.data.github_colors[lang].color | default: '#e0e0e0' -%}
-                    <span style="display: inline-flex; align-items: center; margin-right: 0.5em; margin-bottom: 0.3em; font-size: 0.8em;">
-                        <span style="display: inline-block; width: 0.6em; height: 0.6em; background: {{ color }}; border-radius: 0.15em; border: 1px solid {{ color }}; margin-right: 0.25em;"></span>
-                        <span style="background: none; color: inherit;">{{ lang }}</span>
+                    <span class="language-tag">
+                        <span class="language-dot" style="background: {{ color }}; border-color: {{ color }};"></span>
+                        <span class="language-name">{{ lang }}</span>
                     </span>
                 {%- endfor -%}
             </div>
-                <div class="project-language-bar" style="display: flex; height: 0.5em; width: 100%; overflow: visible; margin-bottom: 2.2em; margin-top: 0.2em; position: relative; background: #e0e0e0;">
+                <div class="project-language-bar">
                 {%- assign percent_sum = 0 -%}
                 {%- for pair in project.languages -%}
                     {%- assign lang = pair[0] -%}
@@ -47,18 +47,18 @@
                     {%- assign color = site.data.github_colors[lang].color | default: '#e0e0e0' -%}
                     {%- assign percent = value | times: 100 | divided_by: total -%}
                     {%- assign percent_sum = percent_sum | plus: percent -%}
-                    <span style="display: block; height: 100%; background: {{ color }}; width: {{ percent }}%; position: relative; cursor: pointer;">
-                        <span style="display: none; position: absolute; left: 0; top: 0.7em; font-size: 0.8em; color: #888; padding: 0; margin: 0; white-space: nowrap; background: none; border: none; z-index: 10; text-align: left; min-width: max-content;" class="lang-bar-tooltip">{{ lang }} ({{ percent }}%)</span>
+                    <span class="language-segment" style="background: {{ color }}; width: {{ percent }}%;">
+                        <span class="lang-bar-tooltip">{{ lang }} ({{ percent }}%)</span>
                     </span>
                 {%- endfor -%}
                 {%- assign remaining = 100 | minus: percent_sum -%}
                 {%- if remaining > 0 -%}
-                    <span style="display: block; height: 100%; background: #e0e0e0; width: {{ remaining }}%; position: relative;"></span>
+                    <span class="language-segment-remaining" style="width: {{ remaining }}%;"></span>
                 {%- endif -%}
             </div>
             <script>
             document.addEventListener('DOMContentLoaded', function() {
-                var bars = document.querySelectorAll('.project-language-bar > span');
+                var bars = document.querySelectorAll('.project-language-bar .language-segment');
                 bars.forEach(function(bar) {
                     bar.addEventListener('mouseenter', function() {
                         var tip = bar.querySelector('.lang-bar-tooltip');
@@ -97,27 +97,27 @@
         {%- endif -%}
         <div class="project-links">
             {%- if project.github -%}
-            <a href="{{ project.github }}" target="_blank" class="project-link" style="background:#0969da; color:#fff;">
+            <a href="{{ project.github }}" target="_blank" class="project-link">
                 <i class="fab fa-github"></i>GitHub
             </a>
             {%- endif -%}
             {%- if project.paper -%}
-            <a href="{{ project.paper }}" target="_blank" class="project-link" style="background:#28a745; color:#fff;">
+            <a href="{{ project.paper }}" target="_blank" class="project-link paper">
                 <i class="fas fa-file-text"></i>Paper
             </a>
             {%- endif -%}
             {%- if project.demo -%}
-            <a href="{{ project.demo }}" target="_blank" class="project-link" style="background:#ff9800; color:#fff;">
+            <a href="{{ project.demo }}" target="_blank" class="project-link demo">
                 <i class="fas fa-external-link-alt"></i>Demo
             </a>
             {%- endif -%}
             {%- if project.documentation -%}
-            <a href="{{ project.documentation }}" target="_blank" class="project-link" style="background:#8e24aa; color:#fff;">
+            <a href="{{ project.documentation }}" target="_blank" class="project-link docs">
                 <i class="fas fa-book"></i>Docs
             </a>
             {%- endif -%}
             {%- if project.website -%}
-            <a href="{{ project.website }}" target="_blank" class="project-link" style="background:#009688; color:#fff;">
+            <a href="{{ project.website }}" target="_blank" class="project-link website">
                 <i class="fas fa-globe"></i>Website
             </a>
             {%- endif %}

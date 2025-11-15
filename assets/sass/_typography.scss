@@ -1,0 +1,180 @@
+// ============================================================================
+// TYPOGRAPHY - Heading Hierarchy & Text Styles
+// ============================================================================
+
+// Base body typography
+body {
+  font-family: $font-body;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Heading hierarchy
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  color: $text-primary;
+  margin: 0 0 $spacing-md 0;
+}
+
+h1 {
+  font-size: $font-size-4xl;
+  letter-spacing: $letter-spacing-tight;
+  font-weight: $font-weight-bold;
+}
+
+h2 {
+  font-size: $font-size-3xl;
+  letter-spacing: $letter-spacing-tight;
+  font-weight: $font-weight-semibold;
+}
+
+h3 {
+  font-size: $font-size-2xl;
+  letter-spacing: $letter-spacing-snug;
+  font-weight: $font-weight-semibold;
+  color: $primary-color;  // Purple for h3
+}
+
+h4 {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-snug;
+}
+
+h5 {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-snug;
+}
+
+h6 {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-base;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-wide;
+}
+
+// Paragraph styles
+p {
+  margin: 0 0 $spacing-md 0;
+  line-height: $line-height-base;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Lead paragraphs (introductions)
+.lead {
+  font-size: $font-size-lg;
+  line-height: $line-height-relaxed;
+  font-weight: $font-weight-medium;
+  color: $text-secondary;
+  margin-bottom: $spacing-xl;
+}
+
+// Labels and metadata
+.label,
+.metadata,
+.tag-label {
+  font-family: $font-body;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-wide;
+  color: $text-muted;
+}
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: $transition-fast;
+
+  &:hover {
+    color: $link-hover;
+  }
+}
+
+// Strong and emphasis
+strong, b {
+  font-weight: $font-weight-semibold;
+  color: $text-primary;
+}
+
+em, i {
+  font-style: italic;
+}
+
+// Code and monospace
+code, kbd, samp {
+  font-family: $font-mono;
+  font-size: 0.9em;
+  padding: 0.15em 0.4em;
+  background: $background-light;
+  border-radius: $radius-sm;
+  border: 1px solid $border-color;
+}
+
+pre {
+  font-family: $font-mono;
+  font-size: $font-size-sm;
+  line-height: $line-height-relaxed;
+  padding: $spacing-md;
+  background: $background-light;
+  border-radius: $radius-md;
+  border: 1px solid $border-color;
+  overflow-x: auto;
+  margin: 0 0 $spacing-lg 0;
+
+  code {
+    padding: 0;
+    background: none;
+    border: none;
+  }
+}
+
+// Lists
+ul, ol {
+  margin: 0 0 $spacing-md 0;
+  padding-left: $spacing-xl;
+  line-height: $line-height-relaxed;
+
+  li {
+    margin-bottom: $spacing-xs;
+  }
+}
+
+// Blockquotes
+blockquote {
+  margin: 0 0 $spacing-lg 0;
+  padding: $spacing-md $spacing-lg;
+  border-left: $border-width-thick solid $primary-color;
+  background: $background-purple-tint;
+  font-style: italic;
+  color: $text-secondary;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Horizontal rule
+hr {
+  border: none;
+  border-top: $border-width solid $border-color;
+  margin: $spacing-xxl 0;
+}
+
+// Small text
+small {
+  font-size: $font-size-sm;
+  color: $text-muted;
+}
