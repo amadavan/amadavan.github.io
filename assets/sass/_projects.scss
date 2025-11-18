@@ -2,8 +2,8 @@
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: $spacing-xl;
-  margin: $spacing-xl 0;
+  gap: $spacing-xxl;
+  margin: $spacing-xxl 0;
 
   // Explicit responsive breakpoints
   @media (max-width: 1200px) {
