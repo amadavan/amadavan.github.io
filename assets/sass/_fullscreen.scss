@@ -7,11 +7,13 @@
 
 body {
   font-family: $font-body;
+  background-color: #ffffff;
   height: 100vh;
   margin: 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  color: $text-primary;
 }
 
 .fullscreen-container {
@@ -28,43 +30,30 @@ body {
 
 .main-title {
   font-family: $font-heading;
-  font-size: $font-size-5xl;
-  font-weight: $font-weight-medium;
-  letter-spacing: $letter-spacing-tight;
-  margin-bottom: 0;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.6s ease-out 0.2s forwards;
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-bottom: $spacing-md;
+  color: $primary-color;
   -webkit-font-smoothing: antialiased;
-
-  // Gradient text effect
-  background: $gradient-hero;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .role-title {
-  font-family: $font-heading;
-  font-size: $font-size-xl;
-  font-weight: $font-weight-medium;
-  letter-spacing: $letter-spacing-snug;
-  margin-bottom: $spacing-lg;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.6s ease-out 0.3s forwards;
-  color: $text-primary;
+  font-family: $font-body;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-normal;
+  letter-spacing: 0;
+  margin-bottom: $spacing-xxl;
+  color: $text-secondary;
 }
 
 .subtitle {
   font-family: $font-body;
-  font-size: $font-size-md;
+  font-size: $font-size-base;
   font-weight: $font-weight-normal;
   margin-bottom: $spacing-xxl;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.6s ease-out 0.5s forwards;
   color: $text-secondary;
+  font-style: italic;
 }
 
 .social-links {
@@ -72,9 +61,6 @@ body {
   justify-content: center;
   gap: $spacing-lg;
   margin-top: 0;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.6s ease-out 0.6s forwards;
 }
 
 .social-link {
@@ -82,24 +68,21 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 44px;
+  height: 44px;
   background: transparent;
   border-radius: $radius-circle;
-  color: $primary-color;
+  border: 1px solid #e5e5e5;
+  color: $text-secondary;
   text-decoration: none;
-  font-size: 1.5rem;
-  transition: $transition-base;
-  transform: translateY(0) scale(1);
+  font-size: 1.2rem;
+  transition: $transition-fast;
   position: relative;
-  opacity: 0;
-  animation: fadeInUp 0.4s ease-out forwards;
 
   &:hover {
-    background: linear-gradient(135deg, rgba($primary-color, 0.1), rgba($accent-color, 0.1));
-    transform: translateY(-8px) scale(1.15);
-    box-shadow: $shadow-hover-purple;
-    color: $accent-color;
+    background: rgba($primary-color, 0.05);
+    border-color: $primary-color;
+    color: $primary-color;
 
     &::after {
       opacity: 1;
@@ -110,29 +93,21 @@ body {
     content: attr(title);
     font-family: $font-body;
     font-size: $font-size-xs;
-    color: $text-muted;
+    color: $text-primary;
     opacity: 0;
     position: absolute;
     top: 100%;
     margin-top: $spacing-sm;
     white-space: nowrap;
-    transition: opacity 0.3s ease;
-    font-weight: $font-weight-medium;
+    transition: opacity 0.2s ease;
+    font-weight: $font-weight-normal;
   }
-
-  // Staggered animations
-  &:nth-child(1) { animation-delay: 0.8s; }
-  &:nth-child(2) { animation-delay: 0.9s; }
-  &:nth-child(3) { animation-delay: 1.0s; }
-  &:nth-child(4) { animation-delay: 1.1s; }
-  &:nth-child(5) { animation-delay: 1.2s; }
 }
 
 .last-updated {
   margin-top: 4rem;
-  font-size: $font-size-sm;
+  font-size: $font-size-xs;
   color: $text-muted;
-  opacity: 0.7;
   line-height: 1.2;
 }
 

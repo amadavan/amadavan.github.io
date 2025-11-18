@@ -96,24 +96,25 @@
 
   .profile-social {
     position: relative;
-    color: $primary-color;
-    transition: $transition-base;
+    color: $text-secondary;
+    transition: $transition-fast;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border-radius: $radius-circle;
+    border: 1px solid #e5e5e5;
     background: transparent;
 
     i {
-      transition: $transition-base;
+      transition: $transition-fast;
     }
 
     &:hover {
-      background: linear-gradient(135deg, rgba($primary-color, 0.1), rgba($accent-color, 0.1));
-      transform: translateY(-4px) scale(1.1);
-      color: $accent-color;
+      background: rgba($primary-color, 0.05);
+      border-color: $primary-color;
+      color: $primary-color;
 
       .profile-social-label {
         opacity: 1;

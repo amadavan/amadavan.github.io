@@ -9,11 +9,11 @@ $primary-hover: #7b1fa2;                          // Brighter purple for hover
 $primary-light: #9c27b0;                          // Light purple for accents
 $primary-lighter: #e1bee7;                        // Very light purple for backgrounds
 
-// Accent Colors - Refined orange for energy and contrast
-$accent-color: #f97316;                           // Softer orange
-$accent-hover: #fb923c;                           // Lighter orange on hover
-$accent-light: #fdba74;                           // Light orange
-$accent-lighter: #fed7aa;                         // Very light orange
+// Accent Colors - Using purple for consistency
+$accent-color: $primary-color;                    // Purple (matches primary)
+$accent-hover: $primary-hover;                    // Lighter purple on hover
+$accent-light: $primary-light;                    // Light purple
+$accent-lighter: $primary-lighter;                // Very light purple
 
 // Gradients - Purple to orange
 $accent-gradient: linear-gradient(135deg, $primary-color, $accent-color);

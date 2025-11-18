@@ -7,8 +7,9 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: $background-white;
+  background-color: #ffffff;
   min-height: 100vh;
+  color: $text-primary;
 }
 
 .container {
@@ -22,7 +23,7 @@ body {
   margin: 0 auto;
   padding: $spacing-xl $spacing-lg;
   flex: 1;
-  background: $background-white;
+  background: transparent;
   box-shadow: none;
   border: none;
 }

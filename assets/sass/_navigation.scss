@@ -1,10 +1,11 @@
 // Navigation styles
 .header {
-  background: $background-white;
-  padding: $spacing-md $spacing-xl 0 $spacing-xl;
-  margin-bottom: 0;
+  background: transparent;
+  padding: $spacing-xl 0 $spacing-md 0;
+  margin-bottom: $spacing-lg;
   text-align: center;
   color: $text-primary;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .site-title {
@@ -52,7 +53,7 @@
   span {
     width: 18px;
     height: 2px;
-    background: $primary-color;
+    background: $text-primary;
     display: block;
     transition: 0.3s ease;
     border-radius: 1px;
@@ -83,19 +84,22 @@
 
   a {
     display: inline-block;
-    padding: $spacing-sm $spacing-lg;
+    padding: $spacing-sm $spacing-md;
     background: transparent;
     border: none;
-    border-radius: $radius-pill;
-    color: $primary-color;
+    border-radius: 0;
+    color: $text-secondary;
     text-decoration: none;
-    font-weight: 500;
-    font-size: $spacing-md;
+    font-weight: 400;
+    font-size: $font-size-sm;
+    transition: $transition-fast;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 
     &:hover {
-      @include hover-background($primary-color);
+      background: transparent;
       border: none;
-      color: $primary-hover;
+      color: $primary-color;
     }
   }
 }
@@ -119,12 +123,13 @@
     top: 100%;
     right: 0;
     width: 200px;
-    background: $accent-gradient;
+    background: $background-white;
     flex-direction: column;
     gap: 0;
     padding: $spacing-md 0;
-    border-radius: $radius-lg;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: $radius-sm;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e5e5;
     z-index: 1000;
 
     &.active {
@@ -138,23 +143,22 @@
     a {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       gap: $spacing-xs;
-      padding: 0.875rem $spacing-lg;
-      margin: 0.25rem $spacing-md;
-      border-radius: $radius-md;
-      text-align: center;
+      padding: $spacing-sm $spacing-md;
+      margin: 0;
+      border-radius: 0;
+      text-align: left;
       background: transparent;
       border: none;
-      backdrop-filter: none;
-      color: $background-white;
+      color: $text-secondary;
       text-decoration: none;
       min-height: $touch-target-min;
 
       &:hover {
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba($primary-color, 0.05);
         border: none;
-        color: $background-white;
+        color: $primary-color;
       }
     }
   }
@@ -165,6 +169,6 @@
   }
 
   .header {
-    padding: $spacing-md $spacing-md 0 $spacing-md;
+    padding: $spacing-md;
   }
 }
