@@ -1,4 +1,13 @@
-- color: '#2d1b69'
+- color: '#dea584'
+  description: A collection of classic games implemented in Rust. The repository includes
+    implementations of games such as Tic-Tac-Toe, Connect Four, and more, with agentic
+    AIs.
+  github: https://github.com/amadavan/games-rs
+  languages:
+    Rust: 23612
+  title: games-rs
+  banner: https://github.com/amadavan/games-rs/raw/main/assets/games-banner.png
+- color: '#4caf50'
   description: A set of algorithms to evaluate the quantity of solar capacity that
     a network can feasibly support without introducing instabilities, known formally
     as the solar hosting capacity. This includes an algorithm to evaluate the maximal
@@ -10,7 +19,6 @@
     MATLAB: 9744
     Starlark: 8365
   name: Risk-Sensitive Solar Hosting Capacity
-  color: '#4caf50'
   title: RSHC
 - banner: https://github.com/amadavan/Stuka/raw/master/assets/stuka-banner.png
   color: '#000000'
