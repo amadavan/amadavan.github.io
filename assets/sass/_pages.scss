@@ -9,6 +9,7 @@
 .quick-links {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: $spacing-sm;
   padding: $spacing-sm 0;
   margin: $spacing-lg 0;
@@ -28,6 +29,7 @@
 
   a {
     transition: $transition-fast;
+    white-space: nowrap;
 
     &:hover {
       color: $primary-hover;
@@ -124,8 +126,10 @@
 // PDF embed styling
 .pdf-container {
   width: 100%;
+  max-width: 100%;
   min-height: 400px;
   text-align: center;
+  overflow-x: hidden;
 
   iframe {
     border: none;
@@ -135,6 +139,7 @@
 
   canvas {
     width: 100%;
+    max-width: 100%;
     height: auto;
     margin-bottom: 1rem;
     background: white;
