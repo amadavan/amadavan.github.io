@@ -7,6 +7,7 @@
     Rust: 23612
   title: games-rs
   banner: https://github.com/amadavan/games-rs/raw/main/assets/games-banner.png
+  video: https://github.com/amadavan/games-rs/raw/main/assets/connect_four.mp4
 - color: '#4caf50'
   description: A set of algorithms to evaluate the quantity of solar capacity that
     a network can feasibly support without introducing instabilities, known formally
@@ -20,6 +21,7 @@
     Starlark: 8365
   name: Risk-Sensitive Solar Hosting Capacity
   title: RSHC
+  video: https://github.com/amadavan/RSHC/raw/main/images/case3_acceptability.mp4
 - banner: https://github.com/amadavan/Stuka/raw/master/assets/stuka-banner.png
   color: '#000000'
   description: A framework for large-scale linear programs. This library provides
