@@ -1,15 +1,19 @@
-- color: '#dea584'
-  description: A collection of classic games implemented in Rust. The repository includes
-    implementations of games such as Tic-Tac-Toe, Connect Four, and more, with agentic
-    AIs.
+- banner: https://github.com/amadavan/games-rs/raw/main/assets/games-banner.png
+  color: "#dea584"
+  description:
+    A Rust framework for building autonomous agents that learn to play
+    table games. Agents explore strategies, evaluate
+    outcomes, and refine their decision-making over time
+    without human intervention. Currently includes Monte Carlo Tree Search (MCTS) and Minimax, with plans to incorporate
+    additional agentic strategies. Currently supports Connect Four and Tic Tac Toe.
   github: https://github.com/amadavan/games-rs
   languages:
-    Rust: 23612
+    Rust: 58580
   title: games-rs
-  banner: https://github.com/amadavan/games-rs/raw/main/assets/games-banner.png
   video: https://github.com/amadavan/games-rs/raw/main/assets/connect_four.mp4
-- color: '#4caf50'
-  description: A set of algorithms to evaluate the quantity of solar capacity that
+- color: "#4caf50"
+  description:
+    A set of algorithms to evaluate the quantity of solar capacity that
     a network can feasibly support without introducing instabilities, known formally
     as the solar hosting capacity. This includes an algorithm to evaluate the maximal
     solar hosting capacity and a dynamic method of identifying the set of feasible
@@ -23,8 +27,9 @@
   title: RSHC
   video: https://github.com/amadavan/RSHC/raw/main/images/case3_acceptability.mp4
 - banner: https://github.com/amadavan/Stuka/raw/master/assets/stuka-banner.png
-  color: '#000000'
-  description: A framework for large-scale linear programs. This library provides
+  color: "#000000"
+  description:
+    A framework for large-scale linear programs. This library provides
     a framework for implementing algorithms that provides clarity to the algorithms
     and allows fast computation by leveraging libraries such as Eigen and SuiteSparse.
   github: https://github.com/amadavan/Stuka
@@ -37,8 +42,9 @@
     Shell: 5392
   title: Stuka
 - banner: https://github.com/amadavan/PhasorPy/raw/master/assets/phasor-banner.png
-  color: '#000000'
-  description: Power systems simulations in academic work are frequently solved using
+  color: "#000000"
+  description:
+    Power systems simulations in academic work are frequently solved using
     the MATPOWER package. The package provides MATLAB and Octave M-files in order
     to solve power flow, continuation power flow and optimal power flow problems.
     The goal of the Phasor package is remove the need for MATLAB or Octave while providing
@@ -48,8 +54,9 @@
     MATLAB: 72636124
     Python: 30723
   title: PhasorPy
-- color: '#E84A27'
-  description: A Beamer theme for creating presentations in the style of the University
+- color: "#E84A27"
+  description:
+    A Beamer theme for creating presentations in the style of the University
     of Illinois at Urbana-Champaign. The theme provides a clean and modern look while
     adhering to the university's branding guidelines.
   github: https://github.com/amadavan/UIUC-Beamer-Theme
